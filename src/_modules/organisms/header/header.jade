@@ -1,0 +1,9 @@
+include ../../molecules/menu/menu
+
+mixin header(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  - spec.currentPage = spec.currentPage || site.data.pages.home.name
+
+  div(class=spec.__class).header&attributes(attributes)
+    +menu({ active: spec.currentPage })

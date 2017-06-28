@@ -1,0 +1,11 @@
+extends _layouts/base
+
+block title
+  title= site.data.global.titleHome
+
+block content
+  h1 It works!
+    svg.icon
+       use(xlink:href='img/sprite.svg#icon-happy')
+    img(src="img/atomic-design.svg").svg-image
+  code.version Yeomas. Based on yeogurt generator. Atomic design present. Modify by Dimasion.

@@ -1,0 +1,8 @@
+mixin menu(spec)
+  - spec = spec || {}
+  - spec.modifier = spec.modifier || ''
+  - spec.active = spec.active || null
+
+  nav.menu(class=spec.__class)&attributes(attributes)
+    a(href=site.data.pages.home.link class=site.data.pages.home.name === spec.active ? 'menu__item--active' : '').menu__item= site.data.pages.home.name
+    a(href=site.data.pages.about.link class=site.data.pages.about.name === spec.active ? 'menu__item--active' : '').menu__item= site.data.pages.about.name
