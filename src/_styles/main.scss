@@ -5,8 +5,6 @@
 //------------------------------
 @import 'includes/_normalize';
 @import 'includes/_bootstrap-grid';
-@import 'includes/_temporary';
-
 
 //------------------------------
 // => Settings
@@ -23,6 +21,7 @@
 //------------------------------
 // Atoms
 //------------------------------
+@import '../_modules/atoms/select/select';
 
 //------------------------------
 // Molecules

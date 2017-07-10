@@ -1,12 +1,9 @@
 extends ../_layouts/base
 
-block title
-  title= site.data.global.titleAbout
-
 block config
   //- Correct base url pathing for this page
   - var baseUrl = '../'
-  - var currentPage = site.data.pages.about.name
+  - var currentPage = site.data.pages.buildings.dataName
 
 block content
-  h1 Under construction
+  p buildings page

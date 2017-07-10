@@ -6,10 +6,17 @@
 // Imports
 // ------------------------------
 import $ from 'jquery';
+window.$ = $;
+
 import pages from './../_data/pages.json';
 
 // Modules
-import Link from './../_modules/molecules/menu/menu';
+
+// Atoms
+import Select from './../_modules/atoms/select/select';
+
+// Molecules
+import Menu from './../_modules/molecules/menu/menu';
 
 // ------------------------------
 // Additional functionality
@@ -28,9 +35,9 @@ let currentPage = $('body').data('page');
 
 $(() => {
   // Common scripts
-
+  new Select();
   // Home page scripts
-  if (currentPage === pages.home.name) {
-    new Link();
+  if (currentPage === 'home') {
+    let menu = new Menu();
   }
 });

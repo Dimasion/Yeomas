@@ -1,0 +1,10 @@
+mixin select(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  - spec.items = spec.items || []
+  - spec.id = spec.id || ''
+  - spec.name = spec.name || ''
+
+  select(class=spec.__class id=spec.id name=spec.name)
+    each item in spec.items
+      option(value=item)= item

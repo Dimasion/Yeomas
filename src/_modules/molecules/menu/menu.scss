@@ -1,15 +1,38 @@
 // menu styles
 .menu {
-  margin-top: 20px;
+  display: flex;
   &__item {
     border-radius: 10px;
-    display: inline-block;
-    background: $c-dark;
-    color: $c-white;
-    padding: 20px;
-    &--active {
-      background: $c-white;
-      color: $c-dark;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    min-width: 235px;
+    border-radius: $br-min;
+    border: 1px solid $c-light-grey;
+    color: $c-dark;
+    text-transform: uppercase;
+    font-size: $fs-12;
+    justify-content: center;
+    align-items: center;
+    transition: $t-normal;
+    &--active,
+    &:hover {
+      color: $c-white;
+      background-color: $c-orange;
+      border-color: $c-orange;
+      .menu__icon {
+        fill: $c-white;
+      }
     }
+    &--active {
+      pointer-events: none;
+    }
+  }
+  &__icon {
+    margin-left: 10px;
+    fill: $c-orange;
+    width: 18px;
+    height: 18px;
   }
 }

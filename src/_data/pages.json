@@ -1,10 +1,17 @@
 {
-  "home": {
-    "name": "home",
-    "link": "/"
+  "buildings": {
+    "dataName": "new-buildings",
+    "name": "Новобудови",
+    "link": "/new-buildings"
   },
-  "about": {
-    "name": "about",
-    "link": "/about"
+  "market": {
+    "dataName": "secondary-market",
+    "name": "Вторинний ринок",
+    "link": "/secondary-market"
+  },
+  "rent": {
+    "dataName": "rent",
+    "name": "Оренда",
+    "link": "/rent"
   }
 }
