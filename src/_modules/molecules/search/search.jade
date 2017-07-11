@@ -1,0 +1,10 @@
+include ../../atoms/icon/icon
+
+mixin search(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  form.search.js-search(class=spec.__class)&attributes(attributes)
+    input.search__input(type="text" name="search")
+    button.search__submit(type="submit")
+      +icon({ '__class': 'search__icon js-search-btn', icon: 'happy' })

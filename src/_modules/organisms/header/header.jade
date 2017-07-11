@@ -1,4 +1,5 @@
 include ../../molecules/menu/menu
+include ../../molecules/search/search
 
 mixin header(spec)
   - spec = spec || {}
@@ -7,4 +8,6 @@ mixin header(spec)
 
   div(class=spec.__class).header&attributes(attributes)
     .container
-      +menu({ '__class': 'header__menu', active: spec.currentPage })
+      .header__content
+        +menu({ '__class': 'header__menu', active: spec.currentPage })
+        +search({ '__class': 'header__search' })

@@ -17,6 +17,7 @@ import Select from './../_modules/atoms/select/select';
 
 // Molecules
 import Menu from './../_modules/molecules/menu/menu';
+import Search from './../_modules/molecules/search/search';
 
 // ------------------------------
 // Additional functionality
@@ -35,7 +36,8 @@ let currentPage = $('body').data('page');
 
 $(() => {
   // Common scripts
-  new Select();
+  let select = new Select();
+  let search = new Search();
   // Home page scripts
   if (currentPage === 'home') {
     let menu = new Menu();

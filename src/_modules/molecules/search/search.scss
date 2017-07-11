@@ -1,0 +1,33 @@
+// search styles
+.search {
+  display: flex;
+  align-items: center;
+  &__input {
+    border: none;
+    border-bottom: 1px solid $c-light-grey;
+    outline: none;
+    padding: 7px 14px 7px 5px;
+    transition: border $t-normal;
+    &:focus {
+      border-color: $c-orange;
+    }
+  }
+  &__submit {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: none;
+    outline: none;
+    border: none;
+    padding: 0;
+    margin-left: -14px;
+  }
+  &__icon {
+    width: 14px;
+    height: 14px;
+    padding: 7px;
+    &:hover {
+      fill: $c-orange;
+    }
+  }
+}
