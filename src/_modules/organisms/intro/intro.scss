@@ -1,0 +1,57 @@
+// intro styles
+.o-intro {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  &__bg {
+    position: absolute;
+    width: calc(100% - 30px);
+    height: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    margin: auto;
+    @include backgroundCoverCenter;
+  }
+  &__content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+  }
+  &__logo {
+    width: 190px;
+    height: 250px;
+    @include backgroundContainCenter;
+  }
+  &__text {
+    position: relative;
+    color: $c-grey;
+    text-align: center;
+    text-transform: uppercase;
+    width: 110px;
+    &:before {
+      position: absolute;
+      left: -145px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      content: '';
+      width: 400px;
+      height: 400px;
+      background-image: url('../img/blik.png');
+      @include backgroundContainCenter;
+    }
+  }
+  &__title {
+    position: relative;
+    font-size: $fs-26;
+    font-family: $f-futura;
+  }
+  &__subtitle {
+    position: relative;
+    font-size: $fs-8;
+    margin-top: 10px;
+  }
+}

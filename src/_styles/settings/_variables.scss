@@ -32,11 +32,13 @@ $iPhone: "screen and (max-width : 320px)";
 //------------------------------
 // Font sizes
 //------------------------------
+$fs-8: 8px;
 $fs-12: 12px;
 $fs-13: 13px;
 $fs-14: 14px;
 $fs-15: 15px;
 $fs-16: 16px;
+$fs-26: 26px;
 $fs-30: 30px;
 $fs-33: 33px;
 
@@ -67,7 +69,7 @@ $lh-1-75: 1.75em;
 // Fonts
 //------------------------------
 $f-sans: sans-serif;
-$f-futura: 'futuriscbold';
+$f-futura: 'futuriscbold', arial;
 //------------------------------
 // Shadow
 //------------------------------

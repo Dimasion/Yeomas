@@ -1,0 +1,49 @@
+include ../../atoms/select/select
+include ../../atoms/button/button
+
+mixin filter(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  div.o-filter(class=spec.__class)&attributes(attributes)
+    .container
+      form.o-filter__form
+        .o-filter__row.row
+          .col-md-3
+            +select({ id: 'select-1', name: 'action', items: [
+                { name: 'Купити', val: 'buy'},
+                { name: 'Оренда', val: 'rent'}
+              ]})
+          .col-md-3
+            +select({ id: 'select-2', name: 'type', items: [
+                { name: 'Квартира', val: 'flat'},
+                { name: 'Комерція', val: 'commerce'},
+                { name: 'Будинок', val: 'house'},
+                { name: 'Земельна ділянка', val: 'property'}
+              ]})
+          .col-md-3
+            +select({ id: 'select-3', name: 'region', items: [
+                { name: 'Всі райони', val: 'all'},
+                { name: 'Бам', val: 'bam'},
+                { name: 'Каскад', val: 'cascade'},
+                { name: 'Пасічна', val: 'pasichna'},
+                { name: 'Центр', val: 'center'},
+                { name: 'Майзлі', val: 'maizli'}
+              ]})
+          .col-md-3
+            +select({ id: 'select-4', name: 'realty', items: [
+                { name: 'Новобудова', val: 'new'},
+                { name: 'Вторинний ринок', val: 'second'}
+              ]})
+        .o-filter__row.row
+          .col-md-3
+            +select({ id: 'select-5', name: 'state', items: [
+                { name: 'Тип нерухомості', val: 'all'},
+                { name: 'З ремонтом', val: 'z-remontom'},
+                { name: 'Сирець', val: 'syrets'}
+              ]})
+          .col-md-3
+          .col-md-3
+          .col-md-3
+            +button({ text: 'Шукати' })
+

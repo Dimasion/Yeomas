@@ -1,0 +1,16 @@
+// filter styles
+.o-filter {
+  position: relative;
+  margin-top: -35px;
+  &__form {
+    box-shadow: $bs-main;
+    background: $c-white;
+    padding: 40px;
+    border-radius: $br-min;
+  }
+  &__row {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+}

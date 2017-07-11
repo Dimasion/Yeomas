@@ -1,5 +1,5 @@
 // menu styles
-.menu {
+.m-menu {
   display: flex;
   &__item {
     border-radius: 10px;
@@ -21,7 +21,7 @@
       color: $c-white;
       background-color: $c-orange;
       border-color: $c-orange;
-      .menu__icon {
+      .m-menu__icon {
         fill: $c-white;
       }
     }

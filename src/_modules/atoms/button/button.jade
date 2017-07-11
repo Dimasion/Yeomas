@@ -1,0 +1,7 @@
+mixin button(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  - spec.text = spec.text || ''
+
+  button.a-button(class=spec.__class)&attributes(attributes)
+    span.a-button__text= spec.text

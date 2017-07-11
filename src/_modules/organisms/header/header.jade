@@ -7,9 +7,9 @@ mixin header(spec)
   - spec.__class = spec.__class || ''
   - spec.currentPage = spec.currentPage || 'home'
 
-  div(class=spec.__class).header&attributes(attributes)
+  div(class=spec.__class).o-header&attributes(attributes)
     .container
-      .header__content
-        +menu({ '__class': 'header__menu', active: spec.currentPage })
-        +search({ '__class': 'header__search' })
-        +add-advert({ '__class': 'header__advert' })
+      .o-header__content
+        +menu({ '__class': 'o-header__menu', active: spec.currentPage })
+        +search({ '__class': 'o-header__search' })
+        +add-advert({ '__class': 'o-header__advert' })

@@ -1,4 +1,6 @@
 include _modules/organisms/title/title
+include _modules/organisms/intro/intro
+include _modules/organisms/filter/filter
 
 extends _layouts/base
 
@@ -8,5 +10,6 @@ block title
 block header
   +title
   +header({ currentPage: currentPage })
-
 block content
+  +intro()(style="background-image: url(img/intro.jpg)")
+  +filter

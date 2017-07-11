@@ -1,0 +1,14 @@
+mixin intro(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  div.o-intro(class=spec.__class)
+    .o-intro__bg&attributes(attributes)
+    .o-intro__content
+      .o-intro__text
+        .o-intro__title Продаж
+        .o-intro__subtitle Житлова та комерційна нерухомість
+      .o-intro__logo(style="background-image: url('img/logo.png')")
+      .o-intro__text
+        .o-intro__title Оренда
+        .o-intro__subtitle Житлова та комерційна нерухомість

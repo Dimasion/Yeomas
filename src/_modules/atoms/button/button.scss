@@ -1,0 +1,20 @@
+// button styles
+.a-button {
+  background: $c-orange;
+  border: none;
+  padding: 12px;
+  box-shadow: $bs-main;
+  width: 100%;
+  cursor: pointer;
+  transition: box-shadow $t-normal;
+  outline: none;
+  &__text {
+    text-transform: uppercase;
+    color: $c-white;
+    font-size: $fs-15;
+    transition: color $t-normal;
+  }
+  &:hover {
+    box-shadow: none;
+  }
+}
