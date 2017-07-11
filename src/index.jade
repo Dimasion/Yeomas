@@ -1,6 +1,12 @@
+include _modules/organisms/title/title
+
 extends _layouts/base
 
 block title
   title= site.data.global.titleHome
+
+block header
+  +title
+  +header({ currentPage: currentPage })
 
 block content

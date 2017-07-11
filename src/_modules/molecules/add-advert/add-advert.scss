@@ -1,0 +1,41 @@
+// add-advert styles
+.add-advert {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  &__text {
+    font-size: $fs-12;
+    text-transform: uppercase;
+    transition: color $t-normal;
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: $c-orange;
+    border-radius: 50%;
+    box-shadow: $bs-main;
+    margin-left: 7px;
+    transition: box-shadow $t-normal;
+  }
+  &__icon {
+    fill: $c-white;
+    width: 20px;
+    height: 20px;
+    transition: transform $t-normal;
+  }
+
+  &:hover {
+    .add-advert__icon {
+      transform: rotate(90deg)
+    }
+    .add-advert__btn {
+      box-shadow: none;
+    }
+    .add-advert__text {
+      color: $c-orange;
+    }
+  }
+}

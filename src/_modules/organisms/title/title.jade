@@ -1,0 +1,7 @@
+mixin title(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  div.title(class=spec.__class)&attributes(attributes)
+    .container
+      span Real estate Ivano-Frankivsk

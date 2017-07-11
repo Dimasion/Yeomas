@@ -1,0 +1,10 @@
+include ../../atoms/icon/icon
+
+mixin add-advert(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  div.add-advert(class=spec.__class)&attributes(attributes)
+    .add-advert__text Додати оголошення
+    .add-advert__btn
+      +icon({ '__class': 'add-advert__icon', icon: 'plus' })

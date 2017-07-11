@@ -1,5 +1,6 @@
 include ../../molecules/menu/menu
 include ../../molecules/search/search
+include ../../molecules/add-advert/add-advert
 
 mixin header(spec)
   - spec = spec || {}
@@ -11,3 +12,4 @@ mixin header(spec)
       .header__content
         +menu({ '__class': 'header__menu', active: spec.currentPage })
         +search({ '__class': 'header__search' })
+        +add-advert({ '__class': 'header__advert' })
