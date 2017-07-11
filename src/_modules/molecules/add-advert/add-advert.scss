@@ -28,13 +28,13 @@
   }
 
   &:hover {
-    .add-advert__icon {
+    .m-add-advert__icon {
       transform: rotate(90deg)
     }
-    .add-advert__btn {
+    .m-add-advert__btn {
       box-shadow: none;
     }
-    .add-advert__text {
+    .m-add-advert__text {
       color: $c-orange;
     }
   }

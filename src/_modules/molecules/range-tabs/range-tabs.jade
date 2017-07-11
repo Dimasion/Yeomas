@@ -1,0 +1,15 @@
+include ../../atoms/range/range
+
+mixin range-tabs(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  - spec.tabs = spec.tabs || []
+
+  div.m-range-tabs(class=spec.__class)&attributes(attributes)
+    .m-range-tabs__contents
+      each tab in spec.tabs
+        .m-range-tabs__content(data-tab=tab.id)
+          +range(tab.rangeOptions)
+    .m-range-tabs__tabs
+      each tab in spec.tabs
+        .m-range-tabs__tab(data-tab=tab.id class= tab.active ? 'm-range-tabs__tab--active' : '')= tab.name

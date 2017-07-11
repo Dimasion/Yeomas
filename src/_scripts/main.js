@@ -18,6 +18,7 @@ import Select from './../_modules/atoms/select/select';
 // Molecules
 import Menu from './../_modules/molecules/menu/menu';
 import Search from './../_modules/molecules/search/search';
+import RangeTabs from './../_modules/molecules/range-tabs/range-tabs';
 
 // ------------------------------
 // Additional functionality
@@ -38,6 +39,8 @@ $(() => {
   // Common scripts
   let select = new Select();
   let search = new Search();
+  let rangeTabs = new RangeTabs();
+  rangeTabs.init();
   // Home page scripts
   if (currentPage === 'home') {
     let menu = new Menu();

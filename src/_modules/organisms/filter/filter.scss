@@ -9,8 +9,11 @@
     border-radius: $br-min;
   }
   &__row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     &:not(:last-child) {
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
   }
 }

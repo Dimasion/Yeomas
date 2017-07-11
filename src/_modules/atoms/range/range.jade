@@ -1,0 +1,6 @@
+mixin range(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  - spec.name = spec.name || ''
+  div.range(class=spec.__class)&attributes(attributes)
+    p= spec.name

@@ -1,5 +1,6 @@
 include ../../atoms/select/select
 include ../../atoms/button/button
+include ../../molecules/range-tabs/range-tabs
 
 mixin filter(spec)
   - spec = spec || {}
@@ -10,7 +11,7 @@ mixin filter(spec)
       form.o-filter__form
         .o-filter__row.row
           .col-md-3
-            +select({ id: 'select-1', name: 'action', items: [
+            +select({ '__class': 'asd', id: 'select-1', name: 'action', items: [
                 { name: 'Купити', val: 'buy'},
                 { name: 'Оренда', val: 'rent'}
               ]})
@@ -43,7 +44,16 @@ mixin filter(spec)
                 { name: 'Сирець', val: 'syrets'}
               ]})
           .col-md-3
+            +range-tabs({tabs: [
+              { id: '1', name: 'Площа', rangeOptions: { name: '1' }, active: true },
+              { id: '2', name: 'Кімнати', rangeOptions: { name: '2' } },
+              { id: '3', name: 'Поверх', rangeOptions: { name: '3' } }
+            ]})
           .col-md-3
+            +range-tabs({tabs: [
+              { id: '1', name: 'UAH', rangeOptions: { name: 'uah' } },
+              { id: '2', name: 'USD', rangeOptions: { name: 'usd' }, active: true }
+            ]})
           .col-md-3
             +button({ text: 'Шукати' })
 
