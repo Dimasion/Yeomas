@@ -14,12 +14,14 @@ import pages from './../_data/pages.json';
 
 // Atoms
 import Select from './../_modules/atoms/select/select';
+import Range from './../_modules/atoms/range/range';
 
 // Molecules
 import Menu from './../_modules/molecules/menu/menu';
 import Search from './../_modules/molecules/search/search';
-import RangeTabs from './../_modules/molecules/range-tabs/range-tabs';
 
+// Organisms
+import Filter from './../_modules/organisms/filter/filter';
 // ------------------------------
 // Additional functionality
 // ------------------------------
@@ -37,10 +39,12 @@ let currentPage = $('body').data('page');
 
 $(() => {
   // Common scripts
-  let select = new Select();
+  new Select();
   let search = new Search();
-  let rangeTabs = new RangeTabs();
-  rangeTabs.init();
+  // rangeTabs.init();
+  new Filter();
+
+  let range = new Range();
   // Home page scripts
   if (currentPage === 'home') {
     let menu = new Menu();

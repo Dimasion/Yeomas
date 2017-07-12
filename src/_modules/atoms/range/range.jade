@@ -1,6 +1,21 @@
 mixin range(spec)
   - spec = spec || {}
   - spec.__class = spec.__class || ''
+  - spec.rootClass = spec.rootClass || ''
   - spec.name = spec.name || ''
-  div.range(class=spec.__class)&attributes(attributes)
-    p= spec.name
+  - spec.symbol = spec.symbol || ''
+  - spec.min = spec.min || ''
+  - spec.max = spec.max || ''
+  - spec.from = spec.from || ''
+  - spec.to = spec.to || ''
+  - spec.name = spec.name || ''
+  .range(class=spec.rootClass)
+    input.range__input(type="hidden" name=spec.name)
+    div.range__ui.js-range(
+      class=spec.__class 
+      data-min=spec.min 
+      data-max=spec.max 
+      data-symbol=spec.symbol
+      data-from=spec.from
+      data-to=spec.to
+    )&attributes(attributes)

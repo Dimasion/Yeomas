@@ -4,9 +4,11 @@ import { debounce } from 'lodash';
 export default class Select {
   constructor() {
     this.select = 'select';
+    this.changableSelect = '.js-select-type';
     this.init();
   }
   init () {
+    let self = this;
     $(this.select).each(function(){
       var $this = $(this), numberOfOptions = $(this).children('option').length;
       $this.addClass('select-hidden');
@@ -42,7 +44,9 @@ export default class Select {
         $styledSelect.text($(this).text()).removeClass('active');
         $this.val($(this).attr('rel'));
         $list.hide();
-        //console.log($this.val());
+        $this.closest('.select').find(self.changableSelect).length !== 0
+          ? $(document).trigger( 'onChangeSelectType', $(this).attr('rel'))
+          : '';
       });
 
       $(document).click(function() {
@@ -52,7 +56,7 @@ export default class Select {
       // Set width
       function setSelectWidth() {
         $('.select').each(function(index, item) {
-          let getLabelMargin = parseInt($(this).closest('.select-wrap').find('.select-wrap__label').css('margin-right'))
+          let getLabelMargin = parseInt($(this).closest('.select-wrap').find('.select-wrap__label').css('margin-right'));
           let getLabelWidth = $(this).closest('.select-wrap').find('.select-wrap__label').outerWidth() + getLabelMargin + 1;
           $(this).css('width', 'calc(100% - ' + getLabelWidth + 'px)');
         });

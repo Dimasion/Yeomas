@@ -5,6 +5,7 @@
 //------------------------------
 @import 'includes/_normalize';
 @import 'includes/_bootstrap-grid';
+@import 'includes/_nouislider';
 
 //------------------------------
 // => Settings
@@ -24,6 +25,7 @@
 @import '../_modules/atoms/select/select';
 @import '../_modules/atoms/icon/icon';
 @import '../_modules/atoms/button/button';
+@import '../_modules/atoms/range/range';
 
 //------------------------------
 // Molecules
