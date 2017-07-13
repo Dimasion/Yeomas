@@ -1,6 +1,7 @@
 include _modules/organisms/title/title
 include _modules/organisms/intro/intro
 include _modules/organisms/filter/filter
+include _modules/organisms/content/content
 
 extends _layouts/base
 
@@ -13,3 +14,4 @@ block header
 block content
   +intro()(style="background-image: url(img/intro.jpg)")
   +filter
+  +content

@@ -1,0 +1,119 @@
+// item styles
+.m-item {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 480px;
+  box-shadow: $bs-main;
+  color: $c-dark-3;
+  transition: $t-normal;
+  //------------------------------
+  // Top
+  //------------------------------
+  &__image {
+    position: relative;
+    @include backgroundContainCenter;
+    background-color: $c-black-op;
+    height: 55%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+  &__date {
+    align-self: flex-start;
+    padding: 10px;
+    color: $c-white;
+    background: $c-black-op;
+    font-size: $fs-12;
+    min-width: 110px;
+    text-align: center;
+    margin-left: 3px;
+    margin-top: 3px;
+  }
+  &__promotion {
+    position: absolute;
+    top: 130px;
+    right: -25px;
+    padding: 15px;
+    background: $c-orange;
+    color: $c-white;
+    width: 250px;
+    text-align: center;
+    transform-origin: right;
+    text-transform: uppercase;
+    transform: rotate(45deg);
+  }
+  &__addition {
+    font-size: $fs-12;
+    transform: translateY(100%);
+    text-transform: uppercase;
+    background-color: $c-white-op;
+    padding: 15px;
+    color: $c-grey;
+    width: 75%;
+    text-align: center;
+    transition: transform $t-normal;
+  }
+  //------------------------------
+  // Bottom
+  //------------------------------
+  &__content {
+    display: flex;
+    flex-direction: column;
+    height: 45%;
+    justify-content: space-between;
+    padding: 15px 15px 25px;
+    text-transform: uppercase;
+  }
+  &__describe {
+    text-align: center;
+  }
+  &__title {
+    font-size: $fs-18;
+    color: $c-dark-2;
+  }
+  &__subtitle {
+    font-size: $fs-14;
+  }
+  &__price {
+    text-align: center;
+    font-weight: $fw-6;
+    font-size: $fs-20;
+    margin: 20px 0;
+  }
+
+  // Details
+  &__details {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__icon {
+    margin-bottom: 5px;
+    width: 25px;
+    height: 25px;
+    fill: $c-light-grey-3;
+  }
+  &__detail {
+    text-align: center;
+    &-title {
+      font-size: $fs-16;
+      font-weight: $fw-6;
+    }
+    &-subtitle {
+      font-size: $fs-9;
+    }
+  }
+
+  //------------------------------
+  // Hover
+  //------------------------------
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $bs-main-2;
+    .m-item__addition {
+      transform: translateY(0%);
+    }
+  }
+}

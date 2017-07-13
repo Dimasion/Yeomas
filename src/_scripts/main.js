@@ -19,6 +19,7 @@ import Range from './../_modules/atoms/range/range';
 // Molecules
 import Menu from './../_modules/molecules/menu/menu';
 import Search from './../_modules/molecules/search/search';
+import Item from './../_modules/molecules/item/item';
 
 // Organisms
 import Filter from './../_modules/organisms/filter/filter';
@@ -40,7 +41,9 @@ let currentPage = $('body').data('page');
 $(() => {
   // Common scripts
   new Select();
-  let search = new Search();
+  new Search();
+  new Item();
+
   // rangeTabs.init();
   new Filter();
 

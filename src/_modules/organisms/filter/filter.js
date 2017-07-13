@@ -3,6 +3,7 @@ import RangeTabs from '../../molecules/range-tabs/range-tabs';
 export default class Filter extends RangeTabs {
   constructor() {
     super();
+    this.filterSelector = '.o-filter';
     this.filterCurrency = '.js-filter-currency';
     this.filterMinClass = 'o-filter--min';
     this.custommizationTabs = '.js-customization';

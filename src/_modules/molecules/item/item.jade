@@ -1,0 +1,45 @@
+include ../../atoms/icon/icon
+
+mixin item(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  - spec.image = spec.image || ''
+  - spec.squere = spec.squere || ''
+  - spec.rooms = spec.rooms || ''
+  - spec.floor = spec.floor || ''
+  - spec.region = spec.region || ''
+  - spec.title = spec.title || ''
+  - spec.subtitle = spec.subtitle || ''
+  - spec.price = spec.price || ''
+  - spec.date = spec.date || ''
+  - spec.add = spec.add || ''
+  - spec.promotion = spec.promotion || ''
+
+  a.m-item(href="#" class=spec.__class)&attributes(attributes)
+     .m-item__image(data-path-from-js="../" + spec.image + "" style="background-image: url('" + spec.image + "')")
+      .m-item__date= spec.date
+      .m-item__addition= spec.add
+      if spec.promotion
+       .m-item__promotion Акційна пропозиція
+     .m-item__content
+      .m-item__describe
+        .m-item__title= spec.title
+        .m-item__subtitle= spec.subtitle
+      .m-item__price= spec.price
+      .m-item__details
+        .m-item__detail
+          +icon({ '__class': 'm-item__icon', icon: 'm2' })
+          .m-item__detail-title= spec.squere
+          .m-item__detail-subtitle Площа
+        .m-item__detail
+          +icon({ '__class': 'm-item__icon', icon: 'door' })
+          .m-item__detail-title= spec.rooms
+          .m-item__detail-subtitle Кімнати
+        .m-item__detail
+          +icon({ '__class': 'm-item__icon', icon: 'floor' })
+          .m-item__detail-title= spec.floor
+          .m-item__detail-subtitle поверх
+        .m-item__detail
+          +icon({ '__class': 'm-item__icon', icon: 'logo' })
+          .m-item__detail-title= spec.region
+          .m-item__detail-subtitle Район

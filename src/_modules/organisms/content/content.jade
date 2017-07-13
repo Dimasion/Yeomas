@@ -1,0 +1,127 @@
+include ../../molecules/item/item
+
+mixin content(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  div.o-content(class=spec.__class)&attributes(attributes)
+    .container
+      .o-content__items.row
+        .o-content__item.col-md-4
+          +item({
+            image: 'img/item.jpg',
+            title: 'Просторна квартира',
+            subtitle: 'на  вул. Симоненка 35',
+            price: '34 800$',
+            squere: '84',
+            rooms: '4',
+            floor: '9',
+            region: 'Каскад',
+            add: 'Продаж',
+            date: '13.12.2017'
+          })
+        .o-content__item.col-md-4
+          +item({
+            image: 'img/item-2.jpg',
+            title: 'Цокольне приміщення з ремонтом',
+            subtitle: 'по вул. Довженка',
+            price: '84 150$',
+            squere: '165',
+            rooms: '3',
+            floor: '-',
+            region: 'Бам',
+            add: 'Продаж',
+            date: '20.03.2017'
+          })
+        .o-content__item.col-md-4
+          +item({
+            image: 'img/item-3.jpg',
+            title: 'Комерційне приміщення',
+            price: '24 000$',
+            squere: '35',
+            rooms: '1',
+            floor: '1',
+            region: 'Каскад',
+            add: 'Продаж',
+            date: '02.03.2017'
+          })
+        .o-content__item.col-md-4
+          +item({
+            image: 'img/item-4.jpg',
+            title: '2-кім. квартира',
+            subtitle: 'на вул.Кармелюка',
+            price: '42 000$',
+            squere: '70',
+            rooms: '2',
+            floor: '2',
+            region: 'Центр',
+            add: 'Продаж',
+            date: '13.07.2017',
+            promotion: true
+          })
+        .o-content__item.col-md-4
+          +item({
+            image: 'img/item-5.jpg',
+            title: 'Просторна квартира',
+            subtitle: 'на  вул. Симоненка 35',
+            price: '34 800$',
+            squere: '84',
+            rooms: '4',
+            floor: '9',
+            region: 'Каскад',
+            add: 'Продаж',
+            date: '13.12.2017'
+          })
+        .o-content__item.col-md-4
+          +item({
+            image: 'img/item-6.jpg',
+            title: 'Просторна квартира',
+            subtitle: 'на  вул. Симоненка 35',
+            price: '34 800$',
+            squere: '84',
+            rooms: '4',
+            floor: '9',
+            region: 'Каскад',
+            add: 'Продаж',
+            date: '13.12.2017'
+          })
+        .o-content__item.col-md-4
+          +item({
+            image: 'img/item-7.png',
+            title: 'Просторна квартира',
+            subtitle: 'на  вул. Симоненка 35',
+            price: '34 800$',
+            squere: '84',
+            rooms: '4',
+            floor: '9',
+            region: 'Каскад',
+            add: 'Продаж',
+            date: '13.12.2017'
+          })
+        .o-content__item.col-md-4
+          +item({
+            image: 'img/item-8.jpg',
+            title: 'Просторна квартира',
+            subtitle: 'на  вул. Симоненка 35',
+            price: '34 800$',
+            squere: '84',
+            rooms: '4',
+            floor: '9',
+            region: 'Каскад',
+            add: 'Продаж',
+            date: '13.12.2017'
+          })
+        .o-content__item.col-md-4
+          +item({
+            image: 'img/item-9.jpg',
+            title: 'Просторна квартира',
+            subtitle: 'на  вул. Симоненка 35',
+            price: '34 800$',
+            squere: '84',
+            rooms: '4',
+            floor: '9',
+            region: 'Каскад',
+            add: 'Продаж',
+            date: '13.12.2017'
+          })
+          
