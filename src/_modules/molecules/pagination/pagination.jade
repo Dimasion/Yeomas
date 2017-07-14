@@ -1,0 +1,14 @@
+include ../../atoms/icon/icon
+
+mixin pagination(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  div.m-pagination(class=spec.__class)&attributes(attributes)
+    +icon({ '__class': 'm-pagination__item m-pagination__item--icon', icon: 'left' })
+    .m-pagination__item.m-pagination__item--active 1
+    .m-pagination__item 2
+    .m-pagination__item 3
+    .m-pagination__item.m-pagination__item--dots ...
+    .m-pagination__item 4
+    +icon({ '__class': 'm-pagination__item m-pagination__item--icon', icon: 'right' })

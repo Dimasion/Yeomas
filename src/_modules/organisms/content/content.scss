@@ -1,7 +1,40 @@
 // content styles
 .o-content {
   margin: 70px 0;
+  //------------------------------
+  // Top / Bottom
+  //------------------------------
+  &__top,
+  &__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  &__pagination {
+    display: flex;
+    justify-content: center;
+  }
+
+  //------------------------------
+  // Top
+  //------------------------------
+  &__top {
+    margin-bottom: 30px;
+  }
+
+  //------------------------------
+  // Bottom
+  //------------------------------
+  &__up {
+    display: flex;
+    justify-content: flex-end;
+  }
+  //------------------------------
+  // Center
+  //------------------------------
+  
   &__item {
     margin-bottom: 30px;
   }
+  
 }

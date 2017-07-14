@@ -1,0 +1,9 @@
+include ../../atoms/icon/icon
+
+mixin up(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  div.m-up(class=spec.__class)&attributes(attributes)
+    +icon({ '__class': 'm-up__icon', icon: 'up-arrow' })
+    .m-up__text Вгору

@@ -35,6 +35,10 @@
 @import '../_modules/molecules/add-advert/add-advert';
 @import '../_modules/molecules/range-tabs/range-tabs';
 @import '../_modules/molecules/item/item';
+@import '../_modules/molecules/pagination/pagination';
+@import '../_modules/molecules/sort/sort';
+@import '../_modules/molecules/up/up';
+@import '../_modules/molecules/partner/partner';
 
 //------------------------------
 // Organisms
@@ -44,3 +48,4 @@
 @import '../_modules/organisms/intro/intro';
 @import '../_modules/organisms/filter/filter';
 @import '../_modules/organisms/content/content';
+@import '../_modules/organisms/partners/partners';

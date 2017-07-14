@@ -1,4 +1,7 @@
 include ../../molecules/item/item
+include ../../molecules/up/up
+include ../../molecules/pagination/pagination
+include ../../molecules/sort/sort
 
 mixin content(spec)
   - spec = spec || {}
@@ -6,6 +9,14 @@ mixin content(spec)
 
   div.o-content(class=spec.__class)&attributes(attributes)
     .container
+      //- Top
+      .o-content__top.row
+        .col-md-4
+        .o-content__pagination.col-md-4
+          +pagination
+        .o-content__sort.col-md-4
+          +sort({ items: [{ name: 'Ціна', active: true }, { name: 'Дата' }] })
+      //- Items
       .o-content__items.row
         .o-content__item.col-md-4
           +item({
@@ -124,4 +135,10 @@ mixin content(spec)
             add: 'Продаж',
             date: '13.12.2017'
           })
-          
+      //- Bottom
+      .o-content__bottom.row
+        .col-md-4
+        .o-content__pagination.col-md-4
+          +pagination
+        .o-content__up.col-md-4
+          +up

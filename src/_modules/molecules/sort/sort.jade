@@ -1,0 +1,10 @@
+mixin sort(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  - spec.items = spec.items || []
+
+  div.m-sort(class=spec.__class)&attributes(attributes)
+    .m-sort__title Сортування:
+    .m-sort__items
+      each item in spec.items
+        a(href="#" class=item.active ? 'm-sort__item--active' : '').m-sort__item= item.name

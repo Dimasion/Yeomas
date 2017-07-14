@@ -1,0 +1,27 @@
+// up styles
+.m-up {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  &__text {
+    text-transform: uppercase;
+    font-size: 12px;
+    transition: color $t-normal;
+  }
+  &__icon {
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+    transition: $t-normal;
+  }
+
+  &:hover {
+    .m-up__text {
+      color: $c-orange;
+    }
+    .m-up__icon {
+      transform: translateY(-3px);
+      fill: $c-orange;
+    }
+  }
+}

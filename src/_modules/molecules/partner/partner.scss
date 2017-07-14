@@ -1,0 +1,20 @@
+// partner styles
+.m-partner {
+  border: 1px solid $c-light-grey-2;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__image {
+    filter: grayscale(100%);
+    transition: $t-normal;
+    max-width: 150px;
+    max-height: 90px;
+    padding: 10px;
+  }
+  &:hover {
+    .m-partner__image {
+      filter: grayscale(0%);
+    }
+  }
+}

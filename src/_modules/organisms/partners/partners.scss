@@ -1,0 +1,23 @@
+// partners styles
+.o-partners {
+  margin: 100px 0 70px;
+  &__title {
+    font-size: $fs-30;
+    text-align: center;
+    color: $c-grey-3;
+    text-transform: uppercase;
+  }
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+  }
+  &__item {
+    margin-right: 7px;
+    margin-bottom: 7px;
+    width: calc(25% - 7px);
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+}

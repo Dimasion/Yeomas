@@ -1,0 +1,7 @@
+mixin partner(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  - spec.image = spec.image || ''
+
+  div.m-partner(class=spec.__class)&attributes(attributes)
+    img(src="img/" + spec.image + ".png").m-partner__image

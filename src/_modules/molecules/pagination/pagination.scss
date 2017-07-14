@@ -1,0 +1,28 @@
+// pagination styles
+.m-pagination {
+  display: flex;
+  align-items: center;
+  &__item {
+    margin: 5px;
+    padding: 5px;
+    pointer-events: none;
+    transition: $t-normal;
+    &:not(&--dots) {
+      cursor: pointer;
+      pointer-events: all;
+    }
+    &--icon {
+      cursor: pointer;
+      width: 14px;
+      height: 14px;
+    }
+    &--active {
+      color: $c-orange;
+      pointer-events: none;
+    }
+    &:hover {
+      color: $c-orange;
+      fill: $c-orange;
+    }
+  }
+}

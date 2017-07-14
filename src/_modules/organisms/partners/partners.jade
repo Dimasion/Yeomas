@@ -1,0 +1,15 @@
+include ../../molecules/partner/partner
+
+mixin partners(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  - spec.title = spec.title || ''
+  - spec.partnersNames = spec.partnersNames || []
+
+  div.o-partners(class=spec.__class)&attributes(attributes)
+    .container
+      .o-partners__title= spec.title
+      .o-partners__items
+        each name in spec.partnersNames
+          .o-partners__item
+            +partner({ image: name })

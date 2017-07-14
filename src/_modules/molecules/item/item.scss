@@ -13,7 +13,6 @@
   &__image {
     position: relative;
     @include backgroundContainCenter;
-    background-color: $c-black-op;
     height: 55%;
     display: flex;
     align-items: center;
@@ -29,8 +28,6 @@
     font-size: $fs-12;
     min-width: 110px;
     text-align: center;
-    margin-left: 3px;
-    margin-top: 3px;
   }
   &__promotion {
     position: absolute;
