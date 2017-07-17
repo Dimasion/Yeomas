@@ -1,0 +1,691 @@
+<!DOCTYPE html><html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Житло під ключ - Головна</title>
+  <meta name="description" content="Xata.if - description for SEO.">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body data-page="home">
+  <div class="o-title">
+    <div class="container"><span>Real estate ivano-frankivsk</span></div>
+  </div>
+  <div class="o-header">
+    <div class="container">
+      <div class="o-header__content">
+        <nav class="m-menu o-header__menu"><a href="/new-buildings" class="m-menu__item"><span class="m-menu__text">Новобудови</span>
+            <svg class="a-icon m-menu__icon">
+              <use xlink:href=".//img/sprite.svg#icon-buildings"></use>
+            </svg></a><a href="/secondary-market" class="m-menu__item"><span class="m-menu__text">Вторинний ринок</span>
+            <svg class="a-icon m-menu__icon">
+              <use xlink:href=".//img/sprite.svg#icon-market"></use>
+            </svg></a><a href="/rent" class="m-menu__item"><span class="m-menu__text">Оренда</span>
+            <svg class="a-icon m-menu__icon">
+              <use xlink:href=".//img/sprite.svg#icon-rent"></use>
+            </svg></a></nav>
+        <form class="search js-search o-header__search">
+          <input name="search" class="search__input">
+          <button type="submit" class="search__submit">
+            <svg class="a-icon search__icon js-search-btn">
+              <use xlink:href=".//img/sprite.svg#icon-search"></use>
+            </svg>
+          </button>
+        </form>
+        <div class="m-add-advert o-header__advert">
+          <div class="m-add-advert__text">Додати оголошення</div>
+          <div class="m-add-advert__btn">
+            <svg class="a-icon m-add-advert__icon">
+              <use xlink:href=".//img/sprite.svg#icon-plus"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="o-intro">
+    <div class="o-intro__bg" style="background-image: url(img/intro.jpg)"></div>
+    <div class="o-intro__content">
+      <div class="o-intro__text">
+        <div class="o-intro__title">Продаж</div>
+        <div class="o-intro__subtitle">Житлова та комерційна нерухомість</div>
+      </div>
+      <div style="background-image: url('img/logo.png')" class="o-intro__logo"></div>
+      <div class="o-intro__text">
+        <div class="o-intro__title">Оренда</div>
+        <div class="o-intro__subtitle">Житлова та комерційна нерухомість</div>
+      </div>
+    </div>
+  </div>
+  <div class="o-filter">
+    <div class="container">
+      <form class="o-filter__form">
+        <div class="o-filter__row">
+          <div class="o-filter__col">
+            <select id="select-1" name="action" class="asd">
+              <option value="buy">Купити</option>
+              <option value="rent">Оренда</option>
+            </select>
+          </div>
+          <div class="o-filter__col">
+            <select id="select-2" name="type" class="js-select-type">
+              <option value="flat">Квартира</option>
+              <option value="commerce">Комерція</option>
+              <option value="house">Будинок</option>
+              <option value="property">Земельна ділянка</option>
+            </select>
+          </div>
+          <div class="o-filter__col">
+            <select id="select-3" name="region">
+              <option value="all">Всі райони</option>
+              <option value="bam">Бам</option>
+              <option value="cascade">Каскад</option>
+              <option value="pasichna">Пасічна</option>
+              <option value="center">Центр</option>
+              <option value="maizli">Майзлі</option>
+            </select>
+          </div>
+          <div class="o-filter__col o-filter__col--realty">
+            <select id="select-4" name="realty">
+              <option value="new">Новобудова</option>
+              <option value="second">Вторинний ринок</option>
+            </select>
+          </div>
+        </div>
+        <div class="o-filter__row">
+          <div class="o-filter__col o-filter__col--state">
+            <select id="select-5" name="state">
+              <option value="all">Тип нерухомості</option>
+              <option value="z-remontom">З ремонтом</option>
+              <option value="syrets">Сирець</option>
+            </select>
+          </div>
+          <div class="o-filter__col">
+            <div class="m-range-tabs js-customization">
+              <div class="m-range-tabs__contents">
+                <div data-tab="1" class="m-range-tabs__content">
+                  <div class="range">
+                    <input type="hidden" name="squere" class="range__input">
+                    <div data-min="100" data-max="200" data-symbol="м2" data-from="100" data-to="200" class="range__ui js-range"></div>
+                  </div>
+                </div>
+                <div data-tab="2" class="m-range-tabs__content">
+                  <div class="range">
+                    <input type="hidden" name="rooms" class="range__input">
+                    <div data-min="1" data-max="4" data-symbol="" data-from="1" data-to="4" class="range__ui js-range"></div>
+                  </div>
+                </div>
+                <div data-tab="3" class="m-range-tabs__content">
+                  <div class="range">
+                    <input type="hidden" name="floor" class="range__input">
+                    <div data-min="1" data-max="12" data-symbol="" data-from="1" data-to="12" class="range__ui js-range"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="m-range-tabs__tabs">
+                <div data-tab="1" class="m-range-tabs__tab m-range-tabs__tab--active">Площа</div>
+                <div data-tab="2" class="m-range-tabs__tab">Кімнати</div>
+                <div data-tab="3" class="m-range-tabs__tab">Поверх</div>
+              </div>
+            </div>
+          </div>
+          <div class="o-filter__col">
+            <div class="m-range-tabs">
+              <div class="m-range-tabs__contents">
+                <div data-tab="4" class="m-range-tabs__content">
+                  <div class="range js-filter-currency">
+                    <input type="hidden" name="uah" class="range__input">
+                    <div data-min="1000" data-max="2000" data-symbol="грн." data-from="1000" data-to="1200" class="range__ui js-range"></div>
+                  </div>
+                </div>
+                <div data-tab="5" class="m-range-tabs__content">
+                  <div class="range js-filter-currency">
+                    <input type="hidden" name="usd" class="range__input">
+                    <div data-min="100" data-max="200" data-symbol="$" data-from="100" data-to="200" class="range__ui js-range"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="m-range-tabs__tabs">
+                <div data-tab="4" class="m-range-tabs__tab m-range-tabs__tab--active">UAH</div>
+                <div data-tab="5" class="m-range-tabs__tab">USD</div>
+              </div>
+            </div>
+          </div>
+          <div class="o-filter__col">
+            <button class="a-button"><span class="a-button__text">Шукати</span></button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="o-content">
+    <div class="container">
+      <div class="o-content__top row">
+        <div class="col-md-4"></div>
+        <div class="o-content__pagination col-md-4">
+          <div class="m-pagination">
+            <svg class="a-icon m-pagination__item m-pagination__item--icon">
+              <use xlink:href=".//img/sprite.svg#icon-left"></use>
+            </svg>
+            <div class="m-pagination__item m-pagination__item--active">1</div>
+            <div class="m-pagination__item">2</div>
+            <div class="m-pagination__item">3</div>
+            <div class="m-pagination__item m-pagination__item--dots">...</div>
+            <div class="m-pagination__item">4</div>
+            <svg class="a-icon m-pagination__item m-pagination__item--icon">
+              <use xlink:href=".//img/sprite.svg#icon-right"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="o-content__sort col-md-4">
+          <div class="m-sort">
+            <div class="m-sort__title">Сортування:</div>
+            <div class="m-sort__items"><a href="#" class="m-sort__item--active m-sort__item">Ціна</a><a href="#" class="m-sort__item">Дата</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="o-content__items row">
+        <div class="o-content__item col-md-4"><a href="#" class="m-item">
+            <div data-path-from-js="img/item.jpg" style="background-image: url('img/item.jpg')" class="m-item__image">
+              <div class="m-item__date">13.12.2017</div>
+              <div class="m-item__addition">Продаж</div>
+            </div>
+            <div class="m-item__content">
+              <div class="m-item__describe">
+                <div class="m-item__title">Просторна квартира</div>
+                <div class="m-item__subtitle">на  вул. Симоненка 35</div>
+              </div>
+              <div class="m-item__price">34 800$</div>
+              <div class="m-item__details">
+                <div class="m-item__detail">
+                  <svg class="a-icon m-item__icon">
+                    <use xlink:href=".//img/sprite.svg#icon-m2"></use>
+                  </svg>
+                  <div class="m-item__detail-title">84</div>
+                  <div class="m-item__detail-subtitle">Площа</div>
+                </div>
+                <div class="m-item__detail">
+                  <svg class="a-icon m-item__icon">
+                    <use xlink:href=".//img/sprite.svg#icon-door"></use>
+                  </svg>
+                  <div class="m-item__detail-title">4</div>
+                  <div class="m-item__detail-subtitle">Кімнати</div>
+                </div>
+                <div class="m-item__detail">
+                  <svg class="a-icon m-item__icon">
+                    <use xlink:href=".//img/sprite.svg#icon-floor"></use>
+                  </svg>
+                  <div class="m-item__detail-title">9</div>
+                  <div class="m-item__detail-subtitle">поверх</div>
+                </div>
+                <div class="m-item__detail">
+                  <svg class="a-icon m-item__icon">
+                    <use xlink:href=".//img/sprite.svg#icon-logo"></use>
+                  </svg>
+                  <div class="m-item__detail-title">Каскад</div>
+                  <div class="m-item__detail-subtitle">Район</div>
+                </div>
+              </div>
+            </div></a>
+        </div>
+        <div class="o-content__item col-md-4"><a href="#" class="m-item">
+            <div data-path-from-js="img/item-2.jpg" style="background-image: url('img/item-2.jpg')" class="m-item__image">
+              <div class="m-item__date">20.03.2017</div>
+              <div class="m-item__addition">Продаж</div>
+            </div>
+            <div class="m-item__content">
+              <div class="m-item__describe">
+                <div class="m-item__title">Цокольне приміщення з ремонтом</div>
+                <div class="m-item__subtitle">по вул. Довженка</div>
+              </div>
+              <div class="m-item__price">84 150$</div>
+              <div class="m-item__details">
+                <div class="m-item__detail">
+                  <svg class="a-icon m-item__icon">
+                    <use xlink:href=".//img/sprite.svg#icon-m2"></use>
+                  </svg>
+                  <div class="m-item__detail-title">165</div>
+                  <div class="m-item__detail-subtitle">Площа</div>
+                </div>
+                <div class="m-item__detail">
+                  <svg class="a-icon m-item__icon">
+                    <use xlink:href=".//img/sprite.svg#icon-door"></use>
+                  </svg>
+                  <div class="m-item__detail-title">3</div>
+                  <div class="m-item__detail-subtitle">Кімнати</div>
+                </div>
+                <div class="m-item__detail">
+                  <svg class="a-icon m-item__icon">
+                    <use xlink:href=".//img/sprite.svg#icon-floor"></use>
+                  </svg>
+                  <div class="m-item__detail-title">-</div>
+                  <div class="m-item__detail-subtitle">поверх</div>
+                </div>
+                <div class="m-item__detail">
+                  <svg class="a-icon m-item__icon">
+                    <use xlink:href=".//img/sprite.svg#icon-logo"></use>
+                  </svg>
+                  <div class="m-item__detail-title">Бам</div>
+                  <div class="m-item__detail-subtitle">Район</div>
+                </div>
+              </div>
+            </div></a>
+        </div>
+        <div class="o-content__item col-md-4"><a href="#" class="m-item">
+            <div data-path-from-js="img/item-3.jpg" style="background-image: url('img/item-3.jpg')" class="m-item__image">
+              <div class="m-item__date">02.03.2017</div>
+              <div class="m-item__addition">Продаж</div>
+            </div>
+            <div class="m-item__content">
+              <div class="m-item__describe">
+                <div class="m-item__title">Комерційне приміщення</div>
+                <div class="m-item__subtitle"></div>
+              </div>
+              <div class="m-item__price">24 000$</div>
+              <div class="m-item__details">
+                <div class="m-item__detail">
+                  <svg class="a-icon m-item__icon">
+                    <use xlink:href=".//img/sprite.svg#icon-m2"></use>
+                  </svg>
+                  <div class="m-item__detail-title">35</div>
+                  <div class="m-item__detail-subtitle">Площа</div>
+                </div>
+                <div class="m-item__detail">
+                  <svg class="a-icon m-item__icon">
+                    <use xlink:href=".//img/sprite.svg#icon-door"></use>
+                  </svg>
+                  <div class="m-item__detail-title">1</div>
+                  <div class="m-item__detail-subtitle">Кімнати</div>
+                </div>
+                <div class="m-item__detail">
+                  <svg class="a-icon m-item__icon">
+                    <use xlink:href=".//img/sprite.svg#icon-floor"></use>
+                  </svg>
+                  <div class="m-item__detail-title">1</div>
+                  <div class="m-item__detail-subtitle">поверх</div>
+                </div>
+                <div class="m-item__detail">
+                  <svg class="a-icon m-item__icon">
+                    <use xlink:href=".//img/sprite.svg#icon-logo"></use>
+                  </svg>
+                  <div class="m-item__detail-title">Каскад</div>
+                  <div class="m-item__detail-subtitle">Район</div>
+                </div>
+              </div>
+            </div></a>
+        </div>
+        <div class="o-content__item col-md-4"><a href="#" class="m-item">
+            <div data-path-from-js="img/item-4.jpg" style="background-image: url('img/item-4.jpg')" class="m-item__image">
+              <div class="m-item__date">13.07.2017</div>
+              <div class="m-item__addition">Продаж</div>
+              <div class="m-item__promotion">Акційна пропозиція</div>
+            </div>
+            <div class="m-item__content">
+              <div class="m-item__describe">
+                <div class="m-item__title">2-кім. квартира</div>
+                <div class="m-item__subtitle">на вул.Кармелюка</div>
+              </div>
+              <div class="m-item__price">42 000$</div>
+              <div class="m-item__details">
+                <div class="m-item__detail">
+                  <svg class="a-icon m-item__icon">
+                    <use xlink:href=".//img/sprite.svg#icon-m2"></use>
+                  </svg>
+                  <div class="m-item__detail-title">70</div>
+                  <div class="m-item__detail-subtitle">Площа</div>
+                </div>
+                <div class="m-item__detail">
+                  <svg class="a-icon m-item__icon">
+                    <use xlink:href=".//img/sprite.svg#icon-door"></use>
+                  </svg>
+                  <div class="m-item__detail-title">2</div>
+                  <div class="m-item__detail-subtitle">Кімнати</div>
+                </div>
+                <div class="m-item__detail">
+                  <svg class="a-icon m-item__icon">
+                    <use xlink:href=".//img/sprite.svg#icon-floor"></use>
+                  </svg>
+                  <div class="m-item__detail-title">2</div>
+                  <div class="m-item__detail-subtitle">поверх</div>
+                </div>
+                <div class="m-item__detail">
+                  <svg class="a-icon m-item__icon">
+                    <use xlink:href=".//img/sprite.svg#icon-logo"></use>
+                  </svg>
+                  <div class="m-item__detail-title">Центр</div>
+                  <div class="m-item__detail-subtitle">Район</div>
+                </div>
+              </div>
+            </div></a>
+        </div>
+        <div class="o-content__item col-md-4"><a href="#" class="m-item">
+            <div data-path-from-js="img/item-5.jpg" style="background-image: url('img/item-5.jpg')" class="m-item__image">
+              <div class="m-item__date">13.12.2017</div>
+              <div class="m-item__addition">Продаж</div>
+            </div>
+            <div class="m-item__content">
+              <div class="m-item__describe">
+                <div class="m-item__title">Просторна квартира</div>
+                <div class="m-item__subtitle">на  вул. Симоненка 35</div>
+              </div>
+              <div class="m-item__price">34 800$</div>
+              <div class="m-item__details">
+                <div class="m-item__detail">
+                  <svg class="a-icon m-item__icon">
+                    <use xlink:href=".//img/sprite.svg#icon-m2"></use>
+                  </svg>
+                  <div class="m-item__detail-title">84</div>
+                  <div class="m-item__detail-subtitle">Площа</div>
+                </div>
+                <div class="m-item__detail">
+                  <svg class="a-icon m-item__icon">
+                    <use xlink:href=".//img/sprite.svg#icon-door"></use>
+                  </svg>
+                  <div class="m-item__detail-title">4</div>
+                  <div class="m-item__detail-subtitle">Кімнати</div>
+                </div>
+                <div class="m-item__detail">
+                  <svg class="a-icon m-item__icon">
+                    <use xlink:href=".//img/sprite.svg#icon-floor"></use>
+                  </svg>
+                  <div class="m-item__detail-title">9</div>
+                  <div class="m-item__detail-subtitle">поверх</div>
+                </div>
+                <div class="m-item__detail">
+                  <svg class="a-icon m-item__icon">
+                    <use xlink:href=".//img/sprite.svg#icon-logo"></use>
+                  </svg>
+                  <div class="m-item__detail-title">Каскад</div>
+                  <div class="m-item__detail-subtitle">Район</div>
+                </div>
+              </div>
+            </div></a>
+        </div>
+        <div class="o-content__item col-md-4"><a href="#" class="m-item">
+            <div data-path-from-js="img/item-6.jpg" style="background-image: url('img/item-6.jpg')" class="m-item__image">
+              <div class="m-item__date">13.12.2017</div>
+              <div class="m-item__addition">Продаж</div>
+            </div>
+            <div class="m-item__content">
+              <div class="m-item__describe">
+                <div class="m-item__title">Просторна квартира</div>
+                <div class="m-item__subtitle">на  вул. Симоненка 35</div>
+              </div>
+              <div class="m-item__price">34 800$</div>
+              <div class="m-item__details">
+                <div class="m-item__detail">
+                  <svg class="a-icon m-item__icon">
+                    <use xlink:href=".//img/sprite.svg#icon-m2"></use>
+                  </svg>
+                  <div class="m-item__detail-title">84</div>
+                  <div class="m-item__detail-subtitle">Площа</div>
+                </div>
+                <div class="m-item__detail">
+                  <svg class="a-icon m-item__icon">
+                    <use xlink:href=".//img/sprite.svg#icon-door"></use>
+                  </svg>
+                  <div class="m-item__detail-title">4</div>
+                  <div class="m-item__detail-subtitle">Кімнати</div>
+                </div>
+                <div class="m-item__detail">
+                  <svg class="a-icon m-item__icon">
+                    <use xlink:href=".//img/sprite.svg#icon-floor"></use>
+                  </svg>
+                  <div class="m-item__detail-title">9</div>
+                  <div class="m-item__detail-subtitle">поверх</div>
+                </div>
+                <div class="m-item__detail">
+                  <svg class="a-icon m-item__icon">
+                    <use xlink:href=".//img/sprite.svg#icon-logo"></use>
+                  </svg>
+                  <div class="m-item__detail-title">Каскад</div>
+                  <div class="m-item__detail-subtitle">Район</div>
+                </div>
+              </div>
+            </div></a>
+        </div>
+        <div class="o-content__item col-md-4"><a href="#" class="m-item">
+            <div data-path-from-js="img/item-7.png" style="background-image: url('img/item-7.png')" class="m-item__image">
+              <div class="m-item__date">13.12.2017</div>
+              <div class="m-item__addition">Продаж</div>
+            </div>
+            <div class="m-item__content">
+              <div class="m-item__describe">
+                <div class="m-item__title">Просторна квартира</div>
+                <div class="m-item__subtitle">на  вул. Симоненка 35</div>
+              </div>
+              <div class="m-item__price">34 800$</div>
+              <div class="m-item__details">
+                <div class="m-item__detail">
+                  <svg class="a-icon m-item__icon">
+                    <use xlink:href=".//img/sprite.svg#icon-m2"></use>
+                  </svg>
+                  <div class="m-item__detail-title">84</div>
+                  <div class="m-item__detail-subtitle">Площа</div>
+                </div>
+                <div class="m-item__detail">
+                  <svg class="a-icon m-item__icon">
+                    <use xlink:href=".//img/sprite.svg#icon-door"></use>
+                  </svg>
+                  <div class="m-item__detail-title">4</div>
+                  <div class="m-item__detail-subtitle">Кімнати</div>
+                </div>
+                <div class="m-item__detail">
+                  <svg class="a-icon m-item__icon">
+                    <use xlink:href=".//img/sprite.svg#icon-floor"></use>
+                  </svg>
+                  <div class="m-item__detail-title">9</div>
+                  <div class="m-item__detail-subtitle">поверх</div>
+                </div>
+                <div class="m-item__detail">
+                  <svg class="a-icon m-item__icon">
+                    <use xlink:href=".//img/sprite.svg#icon-logo"></use>
+                  </svg>
+                  <div class="m-item__detail-title">Каскад</div>
+                  <div class="m-item__detail-subtitle">Район</div>
+                </div>
+              </div>
+            </div></a>
+        </div>
+        <div class="o-content__item col-md-4"><a href="#" class="m-item">
+            <div data-path-from-js="img/item-8.jpg" style="background-image: url('img/item-8.jpg')" class="m-item__image">
+              <div class="m-item__date">13.12.2017</div>
+              <div class="m-item__addition">Продаж</div>
+            </div>
+            <div class="m-item__content">
+              <div class="m-item__describe">
+                <div class="m-item__title">Просторна квартира</div>
+                <div class="m-item__subtitle">на  вул. Симоненка 35</div>
+              </div>
+              <div class="m-item__price">34 800$</div>
+              <div class="m-item__details">
+                <div class="m-item__detail">
+                  <svg class="a-icon m-item__icon">
+                    <use xlink:href=".//img/sprite.svg#icon-m2"></use>
+                  </svg>
+                  <div class="m-item__detail-title">84</div>
+                  <div class="m-item__detail-subtitle">Площа</div>
+                </div>
+                <div class="m-item__detail">
+                  <svg class="a-icon m-item__icon">
+                    <use xlink:href=".//img/sprite.svg#icon-door"></use>
+                  </svg>
+                  <div class="m-item__detail-title">4</div>
+                  <div class="m-item__detail-subtitle">Кімнати</div>
+                </div>
+                <div class="m-item__detail">
+                  <svg class="a-icon m-item__icon">
+                    <use xlink:href=".//img/sprite.svg#icon-floor"></use>
+                  </svg>
+                  <div class="m-item__detail-title">9</div>
+                  <div class="m-item__detail-subtitle">поверх</div>
+                </div>
+                <div class="m-item__detail">
+                  <svg class="a-icon m-item__icon">
+                    <use xlink:href=".//img/sprite.svg#icon-logo"></use>
+                  </svg>
+                  <div class="m-item__detail-title">Каскад</div>
+                  <div class="m-item__detail-subtitle">Район</div>
+                </div>
+              </div>
+            </div></a>
+        </div>
+        <div class="o-content__item col-md-4"><a href="#" class="m-item">
+            <div data-path-from-js="img/item-9.jpg" style="background-image: url('img/item-9.jpg')" class="m-item__image">
+              <div class="m-item__date">13.12.2017</div>
+              <div class="m-item__addition">Продаж</div>
+            </div>
+            <div class="m-item__content">
+              <div class="m-item__describe">
+                <div class="m-item__title">Просторна квартира</div>
+                <div class="m-item__subtitle">на  вул. Симоненка 35</div>
+              </div>
+              <div class="m-item__price">34 800$</div>
+              <div class="m-item__details">
+                <div class="m-item__detail">
+                  <svg class="a-icon m-item__icon">
+                    <use xlink:href=".//img/sprite.svg#icon-m2"></use>
+                  </svg>
+                  <div class="m-item__detail-title">84</div>
+                  <div class="m-item__detail-subtitle">Площа</div>
+                </div>
+                <div class="m-item__detail">
+                  <svg class="a-icon m-item__icon">
+                    <use xlink:href=".//img/sprite.svg#icon-door"></use>
+                  </svg>
+                  <div class="m-item__detail-title">4</div>
+                  <div class="m-item__detail-subtitle">Кімнати</div>
+                </div>
+                <div class="m-item__detail">
+                  <svg class="a-icon m-item__icon">
+                    <use xlink:href=".//img/sprite.svg#icon-floor"></use>
+                  </svg>
+                  <div class="m-item__detail-title">9</div>
+                  <div class="m-item__detail-subtitle">поверх</div>
+                </div>
+                <div class="m-item__detail">
+                  <svg class="a-icon m-item__icon">
+                    <use xlink:href=".//img/sprite.svg#icon-logo"></use>
+                  </svg>
+                  <div class="m-item__detail-title">Каскад</div>
+                  <div class="m-item__detail-subtitle">Район</div>
+                </div>
+              </div>
+            </div></a>
+        </div>
+      </div>
+      <div class="o-content__bottom row">
+        <div class="col-md-4"></div>
+        <div class="o-content__pagination col-md-4">
+          <div class="m-pagination">
+            <svg class="a-icon m-pagination__item m-pagination__item--icon">
+              <use xlink:href=".//img/sprite.svg#icon-left"></use>
+            </svg>
+            <div class="m-pagination__item m-pagination__item--active">1</div>
+            <div class="m-pagination__item">2</div>
+            <div class="m-pagination__item">3</div>
+            <div class="m-pagination__item m-pagination__item--dots">...</div>
+            <div class="m-pagination__item">4</div>
+            <svg class="a-icon m-pagination__item m-pagination__item--icon">
+              <use xlink:href=".//img/sprite.svg#icon-right"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="o-content__up col-md-4">
+          <div class="m-up">
+            <svg class="a-icon m-up__icon">
+              <use xlink:href=".//img/sprite.svg#icon-up-arrow"></use>
+            </svg>
+            <div class="m-up__text">Вгору</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="o-partners">
+    <div class="container">
+      <div class="o-partners__title">Наші партнери</div>
+      <div class="o-partners__items">
+        <div class="o-partners__item">
+          <div class="m-partner"><img src="img/partner-1.png" class="m-partner__image"></div>
+        </div>
+        <div class="o-partners__item">
+          <div class="m-partner"><img src="img/partner-2.png" class="m-partner__image"></div>
+        </div>
+        <div class="o-partners__item">
+          <div class="m-partner"><img src="img/partner-3.png" class="m-partner__image"></div>
+        </div>
+        <div class="o-partners__item">
+          <div class="m-partner"><img src="img/partner-4.png" class="m-partner__image"></div>
+        </div>
+        <div class="o-partners__item">
+          <div class="m-partner"><img src="img/partner-5.png" class="m-partner__image"></div>
+        </div>
+        <div class="o-partners__item">
+          <div class="m-partner"><img src="img/partner-6.png" class="m-partner__image"></div>
+        </div>
+        <div class="o-partners__item">
+          <div class="m-partner"><img src="img/partner-7.png" class="m-partner__image"></div>
+        </div>
+        <div class="o-partners__item">
+          <div class="m-partner"><img src="img/partner-8.png" class="m-partner__image"></div>
+        </div>
+        <div class="o-partners__item">
+          <div class="m-partner"><img src="img/partner-9.png" class="m-partner__image"></div>
+        </div>
+        <div class="o-partners__item">
+          <div class="m-partner"><img src="img/partner-1.png" class="m-partner__image"></div>
+        </div>
+        <div class="o-partners__item">
+          <div class="m-partner"><img src="img/partner-2.png" class="m-partner__image"></div>
+        </div>
+        <div class="o-partners__item">
+          <div class="m-partner"><img src="img/partner-3.png" class="m-partner__image"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="o-footer">
+    <div class="o-footer__top">
+      <div class="o-footer__top-inner container">
+        <div class="o-footer__number">+38 098 783 33 32</div>
+        <div class="m-socials o-footer__socials"><a href="#" class="m-socials__social">
+            <svg class="a-icon m-socials__icon">
+              <use xlink:href=".//img/sprite.svg#icon-vk"></use>
+            </svg></a><a href="#" class="m-socials__social">
+            <svg class="a-icon m-socials__icon">
+              <use xlink:href=".//img/sprite.svg#icon-facebook"></use>
+            </svg></a><a href="#" class="m-socials__social">
+            <svg class="a-icon m-socials__icon">
+              <use xlink:href=".//img/sprite.svg#icon-instagram"></use>
+            </svg></a>
+        </div>
+        <div class="o-footer__number">+38 098 783 33 32</div>
+      </div>
+    </div>
+    <div class="o-footer__middle">
+      <div class="o-footer__nav">
+        <nav class="m-nav"><a href="#" class="m-nav__item">Новобудови</a><a href="#" class="m-nav__item">Вторинний ринок</a><a href="#" class="m-nav__item">Оренда</a><a href="#" class="m-nav__item">Новини</a><a href="#" class="m-nav__item">Додати оголошення</a><a href="#" class="m-nav__item">Наші партнери</a>
+        </nav>
+      </div>
+    </div>
+    <div class="o-footer__bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4"></div>
+          <div class="o-footer__copyright col-md-4">All rigts reserved xata.if.ua 2017</div>
+          <div class="o-footer__up col-md-4">
+            <div class="m-up">
+              <svg class="a-icon m-up__icon">
+                <use xlink:href=".//img/sprite.svg#icon-up-arrow"></use>
+              </svg>
+              <div class="m-up__text">Вгору</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./scripts/main.js"></script>
+</body></html>
