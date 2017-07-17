@@ -28,6 +28,8 @@
     font-size: $fs-12;
     min-width: 110px;
     text-align: center;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0) scale(1.0, 1.0);
   }
   &__promotion {
     position: absolute;
@@ -40,7 +42,8 @@
     text-align: center;
     transform-origin: right;
     text-transform: uppercase;
-    transform: rotate(45deg);
+    -webkit-backface-visibility: hidden;
+    transform: rotate(45deg) translateZ(0) scale(1.0, 1.0);
   }
   &__addition {
     font-size: $fs-12;
@@ -81,33 +84,10 @@
     margin: 20px 0;
   }
 
-  // Details
-  &__details {
-    display: flex;
-    justify-content: space-between;
-  }
-  &__icon {
-    margin-bottom: 5px;
-    width: 25px;
-    height: 25px;
-    fill: $c-light-grey-3;
-  }
-  &__detail {
-    text-align: center;
-    &-title {
-      font-size: $fs-16;
-      font-weight: $fw-6;
-    }
-    &-subtitle {
-      font-size: $fs-9;
-    }
-  }
-
   //------------------------------
   // Hover
   //------------------------------
   &:hover {
-    transform: translateY(-5px);
     box-shadow: $bs-main-2;
     .m-item__addition {
       transform: translateY(0%);

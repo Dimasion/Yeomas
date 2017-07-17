@@ -2,10 +2,12 @@
   "name": "Template",
   "version": "0.0.1",
   "dependencies": {
+    "gsap": "^1.20.2",
     "jquery": "~3.1.1",
     "lodash": "^4.17.4",
     "node-vibrant": "^3.0.0-alpha.2",
     "nouislider": "^10.0.0",
+    "waypoints": "^4.0.1",
     "wnumb": "^1.1.0"
   },
   "devDependencies": {

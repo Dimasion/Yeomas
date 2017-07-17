@@ -7,9 +7,8 @@
 // ------------------------------
 import $ from 'jquery';
 window.$ = $;
-
-import pages from './../_data/pages.json';
-
+// import pages from './../_data/pages.json';
+require('waypoints/lib/noframework.waypoints.js');
 // Modules
 
 // Atoms
@@ -24,6 +23,7 @@ import Up from './../_modules/molecules/up/up';
 
 // Organisms
 import Filter from './../_modules/organisms/filter/filter';
+import Partners from './../_modules/organisms/partners/partners';
 // ------------------------------
 // Additional functionality
 // ------------------------------
@@ -45,13 +45,10 @@ $(() => {
   new Search();
   new Item();
   new Up();
+  new Partners();
 
   // rangeTabs.init();
   new Filter();
 
   let range = new Range();
-  // Home page scripts
-  if (currentPage === 'home') {
-    let menu = new Menu();
-  }
 });

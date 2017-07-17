@@ -1,0 +1,11 @@
+include ../../atoms/icon/icon
+
+mixin socials(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  - spec.socials = spec.socials || ''
+
+  div.m-socials(class=spec.__class)&attributes(attributes)
+    each social in spec.socials
+      a(href="#").m-socials__social
+        +icon({ '__class': 'm-socials__icon', icon: social.icon })

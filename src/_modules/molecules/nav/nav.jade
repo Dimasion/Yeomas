@@ -1,0 +1,8 @@
+mixin nav(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  - spec.items = spec.items || []
+
+  nav.m-nav(class=spec.__class)&attributes(attributes)
+    each item in spec.items
+      a(href=item.url).m-nav__item= item.name

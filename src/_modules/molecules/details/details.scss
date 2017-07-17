@@ -1,0 +1,19 @@
+// details styles
+.m-details {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  &__icon {
+    margin-bottom: 5px;
+    width: 25px;
+    height: 25px;
+    fill: $c-light-grey-3;
+  }
+  &__title {
+    font-size: $fs-16;
+    font-weight: $fw-6;
+  }
+  &__subtitle {
+    font-size: $fs-9;
+  }
+}
