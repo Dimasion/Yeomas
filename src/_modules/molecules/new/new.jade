@@ -1,0 +1,16 @@
+include ../../atoms/icon/icon
+
+mixin new(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  div.m-new(class=spec.__class)&attributes(attributes)
+    .m-new__image(style="background-image: url('img/item-2.jpg')")
+    .m-new__date 14.12.2016
+    .m-new__title Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    .m-new__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem maiores, reprehenderit qui distinctio excepturi molestiae. Perspiciatis sapiente fuga, saepe id omnis! Quae architecto quisquam est dolorem, adipisci quis, officia perferendis.
+    a(href="#").m-new__more
+      .m-new__more-text Читати детальніше
+      +icon({ '__class': 'm-new__more-icon', icon: 'right-2' })
+
+

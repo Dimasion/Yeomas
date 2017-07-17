@@ -1,0 +1,16 @@
+include ../../atoms/icon/icon
+
+mixin control(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  - spec.type = spec.type || ''
+
+  if spec.type === 'left'
+    a.m-control(href="/" class=spec.__class)&attributes(attributes)
+      +icon({ '__class': 'm-control__icon', icon: 'left' })
+      .m-control__text Назад
+  else
+    a.m-control.m-control--right(href="/" class=spec.__class)&attributes(attributes)
+      .m-control__text Наступне оголошення
+      +icon({ '__class': 'm-control__icon', icon: 'right' })
+    

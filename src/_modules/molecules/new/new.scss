@@ -1,0 +1,52 @@
+// new styles
+.m-new {
+  position: relative;
+  font-size: $fs-14;
+  &__image {
+    @include backgroundCoverCenter;
+    height: 160px;
+    width: 100%;
+  }
+  &__date {
+    color: $c-orange-2;
+    margin-top: 15px;
+  }
+
+  &__title {
+    font-weight: $fw-6;
+    margin-top: 15px;
+    color: $c-dark-2;
+  }
+
+  &__text {
+    color: $c-grey;
+    margin-top: 15px;
+    @include liminText(4, $lh-1-3);
+  }
+
+  &__more {
+    margin-top: 15px;
+    display: inline-flex;
+    align-items: center;
+    &-text {
+      color: $c-orange-2;
+      transition: $t-normal;
+    }
+    &-icon {
+      width: 25px;
+      height: 25px;
+      margin-left: 5px;
+      fill: $c-orange-2;
+      transition: $t-normal;
+    }
+    &:hover {
+      .m-new__more-icon {
+        fill: $c-orange;
+        transform: translateX(3px);
+      }
+      .m-new__more-text {
+        color: $c-orange;
+      }
+    }
+  }
+}

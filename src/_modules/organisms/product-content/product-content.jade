@@ -1,0 +1,14 @@
+include ../../organisms/aside/aside
+include ../../organisms/product/product
+
+mixin product-content(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  div.o-product-content(class=spec.__class)&attributes(attributes)
+    .o-product-content__container.container
+      .row
+        .o-product-content__aside.col-md-4
+          +aside
+        .o-product-content__product.col-md-8
+          +product

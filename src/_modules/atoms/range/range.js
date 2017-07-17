@@ -47,9 +47,6 @@ export default class Range {
       slider.on('set', function(value) {
         $(input).val([Math.round(value[0]), Math.round(value[1])]);
       });
-
     });
-
   }
-
 }

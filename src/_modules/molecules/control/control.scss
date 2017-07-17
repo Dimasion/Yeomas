@@ -1,0 +1,32 @@
+// control styles
+.m-control {
+  display: inline-flex;
+  align-items: center;
+  &__icon {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    fill: $c-grey;
+    transition: $t-normal;
+  }
+  &__text {
+    text-transform: uppercase;
+    font-size: $fs-12;
+    color: $c-grey;
+    transition: $t-normal;
+  }
+  &:hover {
+    .m-control__text {
+      color: $c-dark;
+    }
+    .m-control__icon {
+      fill: $c-dark;
+    }
+  }
+  &--right {
+    .m-control__icon {
+      margin-right: 0px;
+      margin-left: 10px;
+    }
+  }
+}
