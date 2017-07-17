@@ -13,7 +13,7 @@ mixin item(spec)
   - spec.details = spec.details || ''
 
   a.m-item(href="#" class=spec.__class)&attributes(attributes)
-     .m-item__image(data-path-from-js="" + spec.image + "" style="background-image: url('" + spec.image + "')")
+     .m-item__image.js-bg-color(data-path-from-js="" + spec.image + "" style="background-image: url('" + spec.image + "')")
       .m-item__date= spec.date
       .m-item__addition= spec.add
       if spec.promotion

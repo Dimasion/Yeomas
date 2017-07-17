@@ -6,6 +6,8 @@
 @import 'includes/_normalize';
 @import 'includes/_bootstrap-grid';
 @import 'includes/_nouislider';
+@import 'includes/_slick';
+@import 'includes/_slick-theme';
 
 //------------------------------
 // => Settings
@@ -45,6 +47,7 @@
 @import '../_modules/molecules/breadcrumbs/breadcrumbs';
 @import '../_modules/molecules/control/control';
 @import '../_modules/molecules/new/new';
+@import '../_modules/molecules/slider/slider';
 
 //------------------------------
 // Organisms

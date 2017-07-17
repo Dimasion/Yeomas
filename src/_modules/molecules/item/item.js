@@ -3,7 +3,7 @@ import * as Vibrant from 'node-vibrant';
 
 export default class Item {
   constructor() {
-    this.image = '.m-item__image';
+    this.image = '.js-bg-color';
     this.init();
   }
 

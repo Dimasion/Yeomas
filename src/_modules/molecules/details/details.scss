@@ -3,6 +3,7 @@
   display: flex;
   justify-content: space-between;
   text-align: center;
+  text-transform: uppercase;
   &__icon {
     margin-bottom: 5px;
     width: 25px;
@@ -15,5 +16,11 @@
   }
   &__subtitle {
     font-size: $fs-9;
+  }
+
+  &--orange {
+    .m-details__title {
+      color: $c-orange;
+    }
   }
 }

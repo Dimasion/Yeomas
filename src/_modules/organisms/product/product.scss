@@ -1,1 +1,32 @@
 // product styles
+.o-product {
+  //------------------------------
+  // Header
+  //------------------------------
+  
+  &__title {
+    font-size: $fs-26;
+    text-transform: uppercase;
+    font-weight: $fw-6;
+    font-family: $f-futura;
+  }
+  &__subtitle {
+    font-size: $fs-15;
+    text-transform: uppercase;
+  }
+  &__declaration {
+    margin-top: 30px;
+    font-size: $fs-12;
+  }
+
+  //------------------------------
+  // Main
+  //------------------------------
+  &__details {
+    box-shadow: $bs-main;
+    padding: 10px;
+  }
+  &__row {
+    margin: 30px 0;
+  }
+}

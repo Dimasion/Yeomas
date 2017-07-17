@@ -9,6 +9,7 @@ import $ from 'jquery';
 window.$ = $;
 // import pages from './../_data/pages.json';
 require('waypoints/lib/noframework.waypoints.js');
+require('slick-carousel/slick/slick.js');
 // Modules
 
 // Atoms
@@ -20,10 +21,12 @@ import Menu from './../_modules/molecules/menu/menu';
 import Search from './../_modules/molecules/search/search';
 import Item from './../_modules/molecules/item/item';
 import Up from './../_modules/molecules/up/up';
+import Slider from './../_modules/molecules/slider/slider';
 
 // Organisms
 import Filter from './../_modules/organisms/filter/filter';
 import Partners from './../_modules/organisms/partners/partners';
+import Product from './../_modules/organisms/product/product';
 // ------------------------------
 // Additional functionality
 // ------------------------------
@@ -43,6 +46,8 @@ $(() => {
   // Common scripts
   new Select();
   new Search();
+  new Product();
+  new Slider();
   new Item();
   new Up();
   if (currentPage === 'home') {

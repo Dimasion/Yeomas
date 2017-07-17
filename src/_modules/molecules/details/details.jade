@@ -4,8 +4,9 @@ mixin details(spec)
   - spec = spec || {}
   - spec.__class = spec.__class || ''
   - spec.details = spec.details || ''
+  - spec.orange = spec.orange || false
 
-  div.m-details(class=spec.__class)&attributes(attributes)
+  div.m-details(class=spec.__class class=spec.orange ? 'm-details--orange' : '')&attributes(attributes)
       .m-details__detail
         +icon({ '__class': 'm-details__icon', icon: 'm2' })
         .m-details__title= spec.details.squere
@@ -17,7 +18,7 @@ mixin details(spec)
       .m-details__detail
         +icon({ '__class': 'm-details__icon', icon: 'floor' })
         .m-details__title= spec.details.floor
-        .m-details__subtitle поверх
+        .m-details__subtitle Поверх
       .m-item__detail
         +icon({ '__class': 'm-details__icon', icon: 'logo' })
         .m-details__title= spec.details.region

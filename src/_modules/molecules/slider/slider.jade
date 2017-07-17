@@ -1,0 +1,16 @@
+include ../../atoms/icon/icon
+
+mixin slider(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  - spec.images = spec.images || []
+
+  div.m-slider(class=spec.__class)&attributes(attributes)
+    .m-slider__items.js-slider
+      each image in spec.images
+        .m-slider__item.js-bg-color(data-path-from-js="" + image + "" style="background-image: url('" + image + "')")
+    .m-slider__controls
+      .m-slider__control.js-slider-prev
+        +icon({ '__class': 'm-slider__control-icon', icon: 'left' })
+      .m-slider__control.js-slider-next
+        +icon({ '__class': 'm-slider__control-icon', icon: 'right' })

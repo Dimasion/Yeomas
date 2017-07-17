@@ -1,6 +1,33 @@
+include ../../molecules/details/details
+include ../../molecules/slider/slider
+
 mixin product(spec)
   - spec = spec || {}
   - spec.__class = spec.__class || ''
 
-  div(class=spec.__class)&attributes(attributes)
-    p This is an example paragraph for the product module
+  div.o-product(class=spec.__class)&attributes(attributes)
+    .o-product__header
+      .o-product__title квартира з євроремонтом
+      .o-product__subtitle в центральній частині міста
+      .o-product__declaration № оголошення: 508 Дата оголошення: 14.09.2016
+    .o-product__main
+      .o-product__row.row
+        .col-md-6
+          +slider({ images: ['img/item.jpg', 'img/item-2.jpg', 'img/item-3.jpg', 'img/item-4.jpg', 'img/item-5.jpg'] })
+        .col-md-6
+          +details({
+            '__class': 'o-product__details',
+            orange: true,
+            details: {
+              squere: '84',
+              rooms: '4',
+              floor: '9',
+              region: 'Каскад'
+            },
+          })
+      .o-product__row
+        .o-product__title Опис
+        p Hello how are you.
+      .o-product__row
+        .o-product__title Карта
+    .o-product__footer
