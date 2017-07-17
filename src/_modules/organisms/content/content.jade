@@ -2,13 +2,19 @@ include ../../molecules/item/item
 include ../../molecules/up/up
 include ../../molecules/pagination/pagination
 include ../../molecules/sort/sort
+include ../../molecules/breadcrumbs/breadcrumbs
 
 mixin content(spec)
   - spec = spec || {}
   - spec.__class = spec.__class || ''
+  - spec.breadcrumbs = spec.breadcrumbs || ''
+  - spec.breadcrumbsItems = spec.breadcrumbsItems || []
 
   div.o-content(class=spec.__class)&attributes(attributes)
     .container
+      //- Breadcrumbs
+      if spec.breadcrumbs
+        +breadcrumbs({ '__class': 'o-content__breadcrumbs', items: spec.breadcrumbsItems})
       //- Top
       .o-content__top.row
         .col-md-4

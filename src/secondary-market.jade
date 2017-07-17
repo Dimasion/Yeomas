@@ -1,0 +1,28 @@
+include _modules/organisms/title/title
+include _modules/organisms/intro/intro
+include _modules/organisms/filter/filter
+include _modules/organisms/content/content
+include _modules/organisms/partners/partners
+include _modules/organisms/footer/footer
+
+extends _layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = './'
+  - var currentPage = site.data.pages.market.dataName
+
+block title
+  title= site.data.global.titleRent
+
+block header
+  +title({ isLogo: true })
+  +header({ currentPage: currentPage })
+block content
+  +filter
+  +content({ breadcrumbs: true, breadcrumbsItems: [
+    { link: '#', name: 'На головну' },
+    { link: '#', name: 'Купити' },
+    { link: '#', name: 'Квартири' }
+  ]})
+  +footer

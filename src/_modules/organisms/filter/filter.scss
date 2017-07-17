@@ -1,7 +1,7 @@
 // filter styles
 .o-filter {
   position: relative;
-  margin-top: -35px;
+  margin-top: 40px;
   &__form {
     box-shadow: $bs-main;
     background: $c-white;
@@ -28,5 +28,8 @@
         display: none;
       }
     }
+  }
+  &--moved {
+    margin-top: -35px;
   }
 }

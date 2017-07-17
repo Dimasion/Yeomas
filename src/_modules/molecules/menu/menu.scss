@@ -7,7 +7,7 @@
     display: flex;
     align-items: center;
     padding: 0 15px;
-    min-width: 235px;
+    min-width: 200px;
     border-radius: $br-min;
     border: 1px solid $c-light-grey;
     color: $c-dark;
@@ -16,6 +16,9 @@
     justify-content: center;
     align-items: center;
     transition: $t-normal;
+    &:not(:first-child) {
+      margin-left: 10px;
+    }
     &--active,
     &:hover {
       color: $c-white;

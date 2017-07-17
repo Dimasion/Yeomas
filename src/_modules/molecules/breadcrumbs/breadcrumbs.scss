@@ -1,0 +1,26 @@
+// breadcrumbs styles
+.m-breadcrumbs {
+  &__breadcrumb {
+    display: inline-block;
+    position: relative;
+    color: $c-light-grey-3;
+    transition: color $t-normal;
+    &:hover {
+      color: $c-dark;
+    }
+    &:not(:first-child) {
+      margin-left: 20px;
+      &:after {
+        pointer-events: none;
+        position: absolute;
+        content: '';
+        @include backgroundContainCenter;
+        height: 10px;
+        width: 10px;
+        left: -15px;
+        top: 3px;
+        background-image: url('../img/right-arrow.svg');
+      }
+    }
+  }
+}

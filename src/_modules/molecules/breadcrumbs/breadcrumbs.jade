@@ -1,0 +1,8 @@
+mixin breadcrumbs(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  - spec.items = spec.items || []
+
+  div.m-breadcrumbs(class=spec.__class)&attributes(attributes)
+    each item in spec.items
+      a(href=item.link).m-breadcrumbs__breadcrumb= item.name

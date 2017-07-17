@@ -2,16 +2,16 @@
   "buildings": {
     "dataName": "new-buildings",
     "name": "Новобудови",
-    "link": "/new-buildings"
+    "link": "new-buildings.html"
   },
   "market": {
     "dataName": "secondary-market",
     "name": "Вторинний ринок",
-    "link": "/secondary-market"
+    "link": "secondary-market.html"
   },
   "rent": {
     "dataName": "rent",
     "name": "Оренда",
-    "link": "/rent"
+    "link": "rent.html"
   }
 }

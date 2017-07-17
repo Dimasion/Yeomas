@@ -1,6 +1,10 @@
 // content styles
 .o-content {
   margin: 70px 0;
+  &__breadcrumbs {
+    margin-bottom: 15px;
+    padding-left: 40px;
+  }
   //------------------------------
   // Top / Bottom
   //------------------------------

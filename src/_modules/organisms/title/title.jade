@@ -1,7 +1,11 @@
 mixin title(spec)
   - spec = spec || {}
   - spec.__class = spec.__class || ''
+  - spec.isLogo = spec.isLogo || false
 
   div.o-title(class=spec.__class)&attributes(attributes)
-    .container
+    .container.o-title__container
+      if spec.isLogo
+        a(href="/").o-title__home
+          img(src="img/logo.png").o-title__logo
       span Real estate ivano-frankivsk

@@ -2,7 +2,10 @@
 siteName: "Xata.if"
 
 # Titles
-titleHome: "Житло під ключ - Головна"
+titleHome: "Нерухомість - Головна"
+titleRent: "Нерухомість - Оренда"
+titleMarket: "Нерухомість - Вторинний ринок"
+titleBuildings: "Нерухомість - Новобудови"
 
 # SEO
 description: "Xata.if - description for SEO."

@@ -45,10 +45,9 @@ $(() => {
   new Search();
   new Item();
   new Up();
-  new Partners();
-
-  // rangeTabs.init();
+  if (currentPage === 'home') {
+    new Partners();
+  }
   new Filter();
-
-  let range = new Range();
+  new Range();
 });
