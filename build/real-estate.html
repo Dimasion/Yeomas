@@ -33,7 +33,7 @@
             </svg>
           </button>
         </form>
-        <div class="m-add-advert o-header__advert">
+        <div data-modal="advert" class="m-add-advert js-modal-trigger o-header__advert">
           <div class="m-add-advert__text">Додати оголошення</div>
           <div class="m-add-advert__btn">
             <svg class="a-icon m-add-advert__icon">
@@ -47,7 +47,7 @@
   <div class="o-product-content">
     <div class="o-product-content__container container">
       <div class="row">
-        <div class="o-product-content__aside col-md-4">
+        <div class="o-product-content__aside col-md-3">
           <div class="o-aside">
             <div class="m-breadcrumbs o-aside__breadcrumbs"><a href="#" class="m-breadcrumbs__breadcrumb">На головну</a><a href="#" class="m-breadcrumbs__breadcrumb">Купити</a><a href="#" class="m-breadcrumbs__breadcrumb">Квартиру</a>
             </div><a href="/" class="m-control o-aside__prev">
@@ -59,40 +59,154 @@
               <div class="o-aside__title">Новини</div>
               <div class="m-new o-aside__new">
                 <div style="background-image: url('img/item-2.jpg')" class="m-new__image"></div>
-                <div class="m-new__date">14.12.2016</div>
-                <div class="m-new__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-                <div class="m-new__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem maiores, reprehenderit qui distinctio excepturi molestiae. Perspiciatis sapiente fuga, saepe id omnis! Quae architecto quisquam est dolorem, adipisci quis, officia perferendis.</div><a href="#" class="m-new__more">
-                  <div class="m-new__more-text">Читати детальніше</div>
-                  <svg class="a-icon m-new__more-icon">
-                    <use xlink:href=".//img/sprite.svg#icon-right-2"></use>
-                  </svg></a>
+                <div class="m-new__content">
+                  <div class="m-new__date">14.12.2016</div>
+                  <div class="m-new__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                  <div class="m-new__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem maiores, reprehenderit qui distinctio excepturi molestiae. Perspiciatis sapiente fuga, saepe id omnis! Quae architecto quisquam est dolorem, adipisci quis, officia perferendis.</div><a href="#" class="m-new__more">
+                    <div class="m-new__more-text">Читати детальніше</div>
+                    <svg class="a-icon m-new__more-icon">
+                      <use xlink:href=".//img/sprite.svg#icon-right-2"></use>
+                    </svg></a>
+                </div>
               </div>
               <div class="m-new o-aside__new">
                 <div style="background-image: url('img/item-2.jpg')" class="m-new__image"></div>
-                <div class="m-new__date">14.12.2016</div>
-                <div class="m-new__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-                <div class="m-new__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem maiores, reprehenderit qui distinctio excepturi molestiae. Perspiciatis sapiente fuga, saepe id omnis! Quae architecto quisquam est dolorem, adipisci quis, officia perferendis.</div><a href="#" class="m-new__more">
-                  <div class="m-new__more-text">Читати детальніше</div>
-                  <svg class="a-icon m-new__more-icon">
-                    <use xlink:href=".//img/sprite.svg#icon-right-2"></use>
-                  </svg></a>
+                <div class="m-new__content">
+                  <div class="m-new__date">14.12.2016</div>
+                  <div class="m-new__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                  <div class="m-new__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem maiores, reprehenderit qui distinctio excepturi molestiae. Perspiciatis sapiente fuga, saepe id omnis! Quae architecto quisquam est dolorem, adipisci quis, officia perferendis.</div><a href="#" class="m-new__more">
+                    <div class="m-new__more-text">Читати детальніше</div>
+                    <svg class="a-icon m-new__more-icon">
+                      <use xlink:href=".//img/sprite.svg#icon-right-2"></use>
+                    </svg></a>
+                </div>
               </div>
               <div class="m-new o-aside__new">
                 <div style="background-image: url('img/item-2.jpg')" class="m-new__image"></div>
-                <div class="m-new__date">14.12.2016</div>
-                <div class="m-new__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-                <div class="m-new__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem maiores, reprehenderit qui distinctio excepturi molestiae. Perspiciatis sapiente fuga, saepe id omnis! Quae architecto quisquam est dolorem, adipisci quis, officia perferendis.</div><a href="#" class="m-new__more">
-                  <div class="m-new__more-text">Читати детальніше</div>
-                  <svg class="a-icon m-new__more-icon">
-                    <use xlink:href=".//img/sprite.svg#icon-right-2"></use>
-                  </svg></a>
+                <div class="m-new__content">
+                  <div class="m-new__date">14.12.2016</div>
+                  <div class="m-new__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                  <div class="m-new__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem maiores, reprehenderit qui distinctio excepturi molestiae. Perspiciatis sapiente fuga, saepe id omnis! Quae architecto quisquam est dolorem, adipisci quis, officia perferendis.</div><a href="#" class="m-new__more">
+                    <div class="m-new__more-text">Читати детальніше</div>
+                    <svg class="a-icon m-new__more-icon">
+                      <use xlink:href=".//img/sprite.svg#icon-right-2"></use>
+                    </svg></a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="o-product-content__product col-md-8">
-          <div>
-            <p>This is an example paragraph for the product module</p>
+        <div class="o-product-content__product col-md-9">
+          <div class="o-product">
+            <div class="o-product__header">
+              <div class="o-product__title">квартира з євроремонтом</div>
+              <div class="o-product__subtitle">в центральній частині міста</div>
+              <div class="o-product__declaration">№ оголошення: 508 Дата оголошення: 14.09.2016</div>
+            </div>
+            <div class="o-product__main">
+              <div class="o-product__row row">
+                <div class="col-md-7">
+                  <div class="m-slider">
+                    <div class="m-slider__items js-slider">
+                      <div data-path-from-js="img/item.jpg" style="background-image: url('img/item.jpg')" class="m-slider__item js-bg-color"></div>
+                      <div data-path-from-js="img/item-2.jpg" style="background-image: url('img/item-2.jpg')" class="m-slider__item js-bg-color"></div>
+                      <div data-path-from-js="img/item-3.jpg" style="background-image: url('img/item-3.jpg')" class="m-slider__item js-bg-color"></div>
+                      <div data-path-from-js="img/item-4.jpg" style="background-image: url('img/item-4.jpg')" class="m-slider__item js-bg-color"></div>
+                      <div data-path-from-js="img/item-5.jpg" style="background-image: url('img/item-5.jpg')" class="m-slider__item js-bg-color"></div>
+                    </div>
+                    <div class="m-slider__controls">
+                      <div class="m-slider__control js-slider-prev">
+                        <svg class="a-icon m-slider__control-icon">
+                          <use xlink:href=".//img/sprite.svg#icon-left"></use>
+                        </svg>
+                      </div>
+                      <div class="m-slider__control js-slider-next">
+                        <svg class="a-icon m-slider__control-icon">
+                          <use xlink:href=".//img/sprite.svg#icon-right"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-5 o-product__info">
+                  <div class="o-product__info-header">
+                    <div class="m-details o-product__details m-details--orange">
+                      <div class="m-details__detail">
+                        <svg class="a-icon m-details__icon">
+                          <use xlink:href=".//img/sprite.svg#icon-m2"></use>
+                        </svg>
+                        <div class="m-details__title">84</div>
+                        <div class="m-details__subtitle">Площа</div>
+                      </div>
+                      <div class="m-details__detail">
+                        <svg class="a-icon m-details__icon">
+                          <use xlink:href=".//img/sprite.svg#icon-door"></use>
+                        </svg>
+                        <div class="m-details__title">4</div>
+                        <div class="m-details__subtitle">Кімнати</div>
+                      </div>
+                      <div class="m-details__detail">
+                        <svg class="a-icon m-details__icon">
+                          <use xlink:href=".//img/sprite.svg#icon-floor"></use>
+                        </svg>
+                        <div class="m-details__title">9</div>
+                        <div class="m-details__subtitle">Поверх</div>
+                      </div>
+                      <div class="m-item__detail">
+                        <svg class="a-icon m-details__icon">
+                          <use xlink:href=".//img/sprite.svg#icon-logo"></use>
+                        </svg>
+                        <div class="m-details__title">Каскад</div>
+                        <div class="m-details__subtitle">Район</div>
+                      </div>
+                    </div><a href="#" class="a-ibutton o-product__add-advert">
+                      <div class="a-ibutton__text">Зберегти оголошення</div>
+                      <svg class="a-icon a-ibutton__icon">
+                        <use xlink:href=".//img/sprite.svg#icon-star"></use>
+                      </svg></a>
+                  </div>
+                  <div class="o-product__info-main">
+                    <div class="o-person o-product__manager">
+                      <div style="background-image: url('img/item.jpg')" class="o-person__image"></div>
+                      <div class="o-person__content">
+                        <div class="o-person__name">Андрій</div>
+                        <div class="o-person__position">Менеджер з продажу</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="o-product__info-footer"><a href="tel:+38 050 182 53 33" class="m-phone o-product__write">
+                      <svg class="a-icon m-phone__icon">
+                        <use xlink:href=".//img/sprite.svg#icon-telephone"></use>
+                      </svg>
+                      <div class="m-phone__number">+38 050 182 53 33</div></a><a href="#" class="a-ibutton o-product__write">
+                      <div class="a-ibutton__text">Написати</div>
+                      <svg class="a-icon a-ibutton__icon">
+                        <use xlink:href=".//img/sprite.svg#icon-letter"></use>
+                      </svg></a>
+                  </div>
+                </div>
+              </div>
+              <div class="o-product__row">
+                <div class="o-product__low-title">Опис</div>
+                <div>Продається 2 кімнатна квартира загальною площею 68 м2. Знаходиться новобудова на вул. Мазепи.  У вартість квартири входить чистова стяжка, м/п вікна, броньовані двері, штукатурка стін під маяки та лічильники під всі комунікації. Поруч: супермаркет, магазини, ринок, зупинка, поліклініка, дитячий садок. комфортна транспортна розв’язка.</div>
+              </div>
+              <div class="o-product__row">
+                <div class="o-product__low-title">Карта</div>
+                <div id="map" class="o-product__map">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d102281.2480491016!2d34.48907879479748!3d36.763633850129686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1527f4a4c0be6e9f%3A0x4dbef2b1f81e7d77!2z0JzQtdGA0YHRltC9LCBNZXN1ZGl5ZSBNYWhhbGxlc2ksIEFrZGVuaXov0JzQtdGA0YHRltC9LCDQotGD0YDQtdGH0YfQuNC90LA!5e0!3m2!1suk!2sru!4v1500368390586" width="100%" height="450" style="border:0" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="o-product__footer"><a href="/" class="m-control o-product__prev">
+                <svg class="a-icon m-control__icon">
+                  <use xlink:href=".//img/sprite.svg#icon-left"></use>
+                </svg>
+                <div class="m-control__text">Назад</div></a><a href="/" class="m-control m-control--right o-product__next">
+                <div class="m-control__text">Наступне оголошення</div>
+                <svg class="a-icon m-control__icon">
+                  <use xlink:href=".//img/sprite.svg#icon-right"></use>
+                </svg></a>
+            </div>
           </div>
         </div>
       </div>
@@ -136,6 +250,24 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+  <div data-modal="advert" class="m-modal js-modal">
+    <div class="m-modal__container">
+      <div class="m-modal__content">
+        <div class="m-modal__title">Замовити дзвінок</div>
+        <form class="m-modal__form">
+          <div class="form-group">
+            <input name="name" placeholder="Ваше імя" class="a-input">
+          </div>
+          <div class="form-group">
+            <input name="phone" placeholder="Ваш телефон" class="a-input" data-input-type="phone">
+          </div>
+          <div class="form-group">
+            <button class="a-button"><span class="a-button__text">Замовити дзвінок</span></button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
