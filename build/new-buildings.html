@@ -15,16 +15,23 @@
   <div class="o-header">
     <div class="container">
       <div class="o-header__content">
-        <nav class="m-menu o-header__menu"><a href="new-buildings.html" class="m-menu__item m-menu__item--active"><span class="m-menu__text">Новобудови</span>
-            <svg class="a-icon m-menu__icon">
-              <use xlink:href=".//img/sprite.svg#icon-buildings"></use>
-            </svg></a><a href="secondary-market.html" class="m-menu__item"><span class="m-menu__text">Вторинний ринок</span>
-            <svg class="a-icon m-menu__icon">
-              <use xlink:href=".//img/sprite.svg#icon-market"></use>
-            </svg></a><a href="rent.html" class="m-menu__item"><span class="m-menu__text">Оренда</span>
-            <svg class="a-icon m-menu__icon">
-              <use xlink:href=".//img/sprite.svg#icon-rent"></use>
-            </svg></a></nav>
+        <div class="a-hamburger js-hamburger o-header__hamburger"><span></span><span></span><span></span></div>
+        <div class="m-menu-overlay js-menu-overlay"></div>
+        <nav class="m-menu js-menu o-header__menu">
+          <div class="m-menu__close js-menu-close">
+            <div class="m-menu__close-content"><span></span><span></span></div>
+          </div>
+          <div class="m-menu__items"><a href="new-buildings.html" class="m-menu__item m-menu__item--active"><span class="m-menu__text">Новобудови</span>
+              <svg class="a-icon m-menu__icon">
+                <use xlink:href=".//img/sprite.svg#icon-buildings"></use>
+              </svg></a><a href="secondary-market.html" class="m-menu__item"><span class="m-menu__text">Вторинний ринок</span>
+              <svg class="a-icon m-menu__icon">
+                <use xlink:href=".//img/sprite.svg#icon-market"></use>
+              </svg></a><a href="rent.html" class="m-menu__item"><span class="m-menu__text">Оренда</span>
+              <svg class="a-icon m-menu__icon">
+                <use xlink:href=".//img/sprite.svg#icon-rent"></use>
+              </svg></a></div>
+        </nav>
         <form class="search js-search o-header__search">
           <input name="search" class="search__input">
           <button type="submit" class="search__submit">
@@ -34,10 +41,10 @@
           </button>
         </form>
         <div data-modal="advert" class="m-add-advert js-modal-trigger o-header__advert">
-          <div class="m-add-advert__text">Додати оголошення</div>
+          <div class="m-add-advert__text">Замовити дзвінок</div>
           <div class="m-add-advert__btn">
             <svg class="a-icon m-add-advert__icon">
-              <use xlink:href=".//img/sprite.svg#icon-plus"></use>
+              <use xlink:href=".//img/sprite.svg#icon-telephone"></use>
             </svg>
           </div>
         </div>
