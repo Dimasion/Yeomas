@@ -4,6 +4,7 @@
   "dependencies": {
     "gsap": "^1.20.2",
     "jquery": "~3.1.1",
+    "jquery-mask-plugin": "^1.14.11",
     "lodash": "^4.17.4",
     "node-vibrant": "^3.0.0-alpha.2",
     "nouislider": "^10.0.0",
@@ -24,6 +25,7 @@
     "envify": "~4.0.0",
     "foldero": "~0.1.1",
     "glob": "~7.1.1",
+    "gmaps": "^0.4.24",
     "gulp": "~3.9.1",
     "gulp-changed": "~2.0.0",
     "gulp-cssnano": "~2.1.2",

@@ -1,0 +1,9 @@
+mixin person(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  div.o-person(class=spec.__class)&attributes(attributes)
+    .o-person__image(style="background-image: url('img/item.jpg')")
+    .o-person__content
+      .o-person__name Андрій
+      .o-person__position Менеджер з продажу

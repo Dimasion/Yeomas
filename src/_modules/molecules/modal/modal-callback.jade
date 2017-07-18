@@ -1,0 +1,19 @@
+include ../../atoms/button/button
+include ../../atoms/input/input
+
+mixin modal-callback(spec, conent)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  div.m-modal.js-modal(data-modal="advert" class=spec.__class)&attributes(attributes)
+    .m-modal__container
+      .m-modal__content
+        .m-modal__title Замовити дзвінок
+        form.m-modal__form
+          .form-group
+            +input({ name: 'name', placeholder: 'Ваше імя' })
+          .form-group
+            +input({ name: 'phone', placeholder: 'Ваш телефон' })(data-input-type="phone")
+          .form-group
+            +button({ text: 'Замовити дзвінок' })
+        

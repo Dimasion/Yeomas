@@ -1,5 +1,5 @@
 include ../_modules/organisms/header/header
-
+include ../_modules/molecules/modal/modal-callback
 //- Custom Configuration
 block config
   //- Setup site's base URL to match the "baseUrl" key within `package.json`
@@ -25,7 +25,9 @@ body(data-page=currentPage)
     +header({ currentPage: currentPage })
   block content
 
+  +modal-callback()
   block scripts
     script(src= baseUrl + 'scripts/main.js')
+    
 
 </html>

@@ -1,0 +1,19 @@
+// person styles
+.o-person {
+  display: flex;
+  align-items: center;
+  &__image {
+    @include backgroundCoverCenter;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  &__name {
+    font-size: $fs-18;
+    font-weight: $fw-6;
+  }
+  &__position {
+    font-size: $fs-12;
+  }
+}

@@ -1,0 +1,11 @@
+include ../../atoms/icon/icon
+
+mixin ibutton(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  - spec.text = spec.text || ''
+  - spec.icon = spec.icon || ''
+
+  a.a-ibutton(href="#" class=spec.__class)&attributes(attributes)
+    .a-ibutton__text= spec.text
+    +icon({ '__class': 'a-ibutton__icon', icon: spec.icon })

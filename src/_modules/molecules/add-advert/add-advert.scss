@@ -27,7 +27,8 @@
     transition: transform $t-normal;
   }
 
-  &:hover {
+  &:hover,
+  &.active {
     .m-add-advert__icon {
       transform: rotate(90deg) scale(1.3)
     }

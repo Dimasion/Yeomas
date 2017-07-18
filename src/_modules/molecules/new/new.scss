@@ -2,16 +2,19 @@
 .m-new {
   position: relative;
   font-size: $fs-14;
+  transition: $t-normal;
   &__image {
     @include backgroundCoverCenter;
     height: 160px;
     width: 100%;
   }
+  &__content {
+    padding: 10px;
+  }
   &__date {
     color: $c-orange-2;
     margin-top: 15px;
   }
-
   &__title {
     font-weight: $fw-6;
     margin-top: 15px;
@@ -48,5 +51,8 @@
         color: $c-orange;
       }
     }
+  }
+  &:hover {
+    box-shadow: $bs-main;
   }
 }

@@ -1,5 +1,9 @@
 include ../../molecules/details/details
 include ../../molecules/slider/slider
+include ../../molecules/control/control
+include ../../molecules/person/person
+include ../../molecules/phone/phone
+include ../../atoms/ibutton/ibutton
 
 mixin product(spec)
   - spec = spec || {}
@@ -12,22 +16,33 @@ mixin product(spec)
       .o-product__declaration № оголошення: 508 Дата оголошення: 14.09.2016
     .o-product__main
       .o-product__row.row
-        .col-md-6
+        .col-md-7
           +slider({ images: ['img/item.jpg', 'img/item-2.jpg', 'img/item-3.jpg', 'img/item-4.jpg', 'img/item-5.jpg'] })
-        .col-md-6
-          +details({
-            '__class': 'o-product__details',
-            orange: true,
-            details: {
-              squere: '84',
-              rooms: '4',
-              floor: '9',
-              region: 'Каскад'
-            },
-          })
+        .col-md-5.o-product__info
+          .o-product__info-header
+            +details({
+              '__class': 'o-product__details',
+              orange: true,
+              details: {
+                squere: '84',
+                rooms: '4',
+                floor: '9',
+                region: 'Каскад'
+              },
+            })
+            +ibutton({ '__class': 'o-product__add-advert', text: 'Зберегти оголошення', icon: 'star' })
+          .o-product__info-main
+            +person({ '__class': 'o-product__manager'})
+          .o-product__info-footer
+            +phone({ '__class': 'o-product__write', number: '+38 050 182 53 33' })
+            +ibutton({ '__class': 'o-product__write', text: 'Написати', icon: 'letter' })
       .o-product__row
-        .o-product__title Опис
-        p Hello how are you.
+        .o-product__low-title Опис
+        div Продається 2 кімнатна квартира загальною площею 68 м2. Знаходиться новобудова на вул. Мазепи.  У вартість квартири входить чистова стяжка, м/п вікна, броньовані двері, штукатурка стін під маяки та лічильники під всі комунікації. Поруч: супермаркет, магазини, ринок, зупинка, поліклініка, дитячий садок. комфортна транспортна розв’язка.
       .o-product__row
-        .o-product__title Карта
+        .o-product__low-title Карта
+        .o-product__map#map
+          iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d102281.2480491016!2d34.48907879479748!3d36.763633850129686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1527f4a4c0be6e9f%3A0x4dbef2b1f81e7d77!2z0JzQtdGA0YHRltC9LCBNZXN1ZGl5ZSBNYWhhbGxlc2ksIEFrZGVuaXov0JzQtdGA0YHRltC9LCDQotGD0YDQtdGH0YfQuNC90LA!5e0!3m2!1suk!2sru!4v1500368390586" width="100%" height="450" style="border:0" allowfullscreen)
     .o-product__footer
+      +control({ '__class': 'o-product__prev', type: 'left' })
+      +control({ '__class': 'o-product__next' })

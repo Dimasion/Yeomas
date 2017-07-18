@@ -1,0 +1,21 @@
+// phone styles
+.m-phone {
+  height: 40px;
+  background: $c-orange;
+  color: $c-white;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  transition: $t-normal;
+  &__icon {
+    fill: $c-white;
+    margin-right: 10px;
+  }
+  &__number {
+    font-weight: $fw-6;
+    font-size: $fs-18;
+  }
+  &:hover {
+    box-shadow: $bs-main;
+  }
+}

@@ -1,0 +1,30 @@
+// ibutton styles
+.a-ibutton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 0 20px;
+  box-shadow: $bs-main-2;
+  &__text {
+    text-transform: uppercase;
+    font-size: $fs-9;
+    color: $c-dark-4;
+    transition: $t-normal;
+  }
+  &__icon {
+    width: 18px;
+    height: 18px;
+    margin-left: 5px;
+    fill: $c-light-grey-3;
+    transition: $t-normal;
+  }
+  &:hover {
+    .a-ibutton__text {
+      color: $c-orange;
+    }
+    .a-ibutton__icon {
+      fill: $c-orange;
+    }
+  }
+}

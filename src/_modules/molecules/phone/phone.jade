@@ -1,0 +1,10 @@
+include ../../atoms/icon/icon
+
+mixin phone(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  
+  a.m-phone(href="tel:" + spec.number + "" class=spec.__class)&attributes(attributes)
+    
+    +icon({ '__class': 'm-phone__icon', icon: 'telephone' })
+    .m-phone__number= spec.number
