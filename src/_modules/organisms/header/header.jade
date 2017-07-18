@@ -1,6 +1,7 @@
 include ../../molecules/menu/menu
 include ../../molecules/search/search
 include ../../molecules/add-advert/add-advert
+include ../../atoms/hamburger/hamburger
 
 mixin header(spec)
   - spec = spec || {}
@@ -10,6 +11,7 @@ mixin header(spec)
   div(class=spec.__class).o-header&attributes(attributes)
     .container
       .o-header__content
+        +hamburger({ '__class': 'o-header__hamburger'})
         +menu({ '__class': 'o-header__menu', active: spec.currentPage })
         +search({ '__class': 'o-header__search' })
         +add-advert({ '__class': 'o-header__advert' })

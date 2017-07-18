@@ -11,15 +11,16 @@ window.$ = $;
 require('waypoints/lib/noframework.waypoints.js');
 require('slick-carousel/slick/slick.js');
 require('jquery-mask-plugin/dist/jquery.mask.js');
+require('jquery-touchswipe/jquery.touchSwipe.js');
 // Modules
 
 // Atoms
 import Select from './../_modules/atoms/select/select';
 import Range from './../_modules/atoms/range/range';
 import Input from './../_modules/atoms/input/input';
+import Hamburger from './../_modules/atoms/hamburger/hamburger';
 
 // Molecules
-import Menu from './../_modules/molecules/menu/menu';
 import Search from './../_modules/molecules/search/search';
 import Item from './../_modules/molecules/item/item';
 import Up from './../_modules/molecules/up/up';
@@ -53,6 +54,7 @@ $(() => {
   new Input();
   new Slider();
   new Modal();
+  new Hamburger();
   new Item();
   new Up();
   if (currentPage === 'home') {

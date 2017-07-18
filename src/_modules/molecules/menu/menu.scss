@@ -1,14 +1,58 @@
 // menu styles
+.m-menu-overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: $c-black-op-3;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
 .m-menu {
   display: flex;
+  flex-direction: column;
+  &__close {
+    position: relative;
+    padding: 10px;
+    width: calc(100% - 10px);
+    background: rgba(255, 255, 255, 0.05);
+    margin: 10px auto;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    &-content {
+      position: relative;
+      width: 20px;
+      height: 20px;
+    }
+    span {
+      display: block;
+      position: absolute;
+      top: 9px;
+      left: 0;
+      height: 3px;
+      width: 20px;
+      background: $c-white;
+      &:nth-child(1) {
+        transform: rotate(-45deg);
+      }
+      &:nth-child(2) {
+        transform: rotate(45deg);
+      }
+    }
+  }
+  &__items {
+    display: flex;
+  }
   &__item {
     border-radius: 10px;
+    border-radius: $br-min;
     height: 40px;
     display: flex;
     align-items: center;
     padding: 0 15px;
     min-width: 200px;
-    border-radius: $br-min;
     border: 1px solid $c-light-grey;
     color: $c-dark;
     text-transform: uppercase;
@@ -37,5 +81,73 @@
     fill: $c-orange;
     width: 18px;
     height: 18px;
+  }
+}
+
+//------------------------------
+// Responsive
+//------------------------------
+@media #{$screen} {
+  .m-menu {
+    &__item {
+      min-width: 0px;
+    }
+  }
+}
+@media #{$tablet} {
+  .m-menu-overlay {
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transition: $t-normal;
+    &.visible {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  .m-menu {
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+    padding: 15px 0;
+    background: $c-dark;
+    z-index: 10;
+    transform: translateX(-100%);
+    transition: $t-normal;
+    &__close {
+      display: flex;
+    }
+    &__icon {
+      fill: $c-white;
+    }
+    &__items {
+      flex-direction: column;
+    }
+    &__item {
+      color: $c-white;
+      border-radius: 0;
+      border: none;
+      &:not(:first-child) {
+        margin-left: 0;
+      }
+    }
+    &.visible {
+      transform: translateX(0%);
+      &:after {
+        display: none;
+      }
+    }
+    &:after {
+      position: absolute;
+      height: 100%;
+      right: 0;
+      width: 15px;
+      // pointer-events: none;
+      // z-index: -1;
+      content: '';
+      top: 0;
+      transform: translateX(100%);
+    }
   }
 }

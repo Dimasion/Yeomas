@@ -1,0 +1,8 @@
+mixin hamburger(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  div.a-hamburger.js-hamburger(class=spec.__class)&attributes(attributes)
+    span
+    span
+    span

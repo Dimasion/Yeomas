@@ -4,14 +4,19 @@ mixin menu(spec)
   - spec = spec || {}
   - spec.__class = spec.__class || ''
   - spec.active = spec.active || null
-
-  nav.m-menu(class=spec.__class)&attributes(attributes)
-    a.m-menu__item(href=site.data.pages.buildings.link class=site.data.pages.buildings.dataName  === spec.active ? 'm-menu__item--active' : '')
-      span.m-menu__text= site.data.pages.buildings.name
-      +icon({ '__class': 'm-menu__icon', icon: 'buildings' })
-    a.m-menu__item(href=site.data.pages.market.link class=site.data.pages.market.dataName === spec.active ? 'm-menu__item--active' : '')
-      span.m-menu__text= site.data.pages.market.name
-      +icon({ '__class': 'm-menu__icon', icon: 'market' })
-    a.m-menu__item(href=site.data.pages.rent.link class=site.data.pages.rent.dataName === spec.active ? 'm-menu__item--active' : '')
-      span.m-menu__text= site.data.pages.rent.name
-      +icon({ '__class': 'm-menu__icon', icon: 'rent' })
+  .m-menu-overlay.js-menu-overlay
+  nav.m-menu.js-menu(class=spec.__class)&attributes(attributes)
+    .m-menu__close.js-menu-close
+      .m-menu__close-content
+        span
+        span
+    .m-menu__items
+      a.m-menu__item(href=site.data.pages.buildings.link class=site.data.pages.buildings.dataName  === spec.active ? 'm-menu__item--active' : '')
+        span.m-menu__text= site.data.pages.buildings.name
+        +icon({ '__class': 'm-menu__icon', icon: 'buildings' })
+      a.m-menu__item(href=site.data.pages.market.link class=site.data.pages.market.dataName === spec.active ? 'm-menu__item--active' : '')
+        span.m-menu__text= site.data.pages.market.name
+        +icon({ '__class': 'm-menu__icon', icon: 'market' })
+      a.m-menu__item(href=site.data.pages.rent.link class=site.data.pages.rent.dataName === spec.active ? 'm-menu__item--active' : '')
+        span.m-menu__text= site.data.pages.rent.name
+        +icon({ '__class': 'm-menu__icon', icon: 'rent' })

@@ -7,6 +7,7 @@
     font-size: $fs-12;
     text-transform: uppercase;
     transition: color $t-normal;
+    margin-right: 7px;
   }
   &__btn {
     display: flex;
@@ -17,7 +18,6 @@
     background-color: $c-orange;
     border-radius: 50%;
     box-shadow: $bs-main;
-    margin-left: 7px;
     transition: box-shadow $t-normal;
   }
   &__icon {
@@ -30,13 +30,39 @@
   &:hover,
   &.active {
     .m-add-advert__icon {
-      transform: rotate(90deg) scale(1.3)
+      transform: scale(1.3)
     }
     .m-add-advert__btn {
       box-shadow: none;
     }
     .m-add-advert__text {
       color: $c-orange;
+    }
+  }
+}
+
+//------------------------------
+// Responsive
+//------------------------------
+@media #{$desktop} {
+  .m-add-advert {
+    &__text {
+      display: none;
+    }
+  }
+}
+
+@media #{$tablet} {
+  .m-add-advert {
+    &__text {
+      display: block;
+    }
+  }
+}
+@media #{$phone} {
+  .m-add-advert {
+    &__text {
+      display: none;
     }
   }
 }

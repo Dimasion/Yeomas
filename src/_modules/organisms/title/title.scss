@@ -19,3 +19,12 @@
     margin-right: 20px;
   }
 }
+
+//------------------------------
+// Responsive
+//------------------------------
+@media #{$tablet} {
+  .o-title {
+    font-size: $fs-26;
+  }
+}

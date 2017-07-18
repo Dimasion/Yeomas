@@ -5,6 +5,6 @@ mixin add-advert(spec)
   - spec.__class = spec.__class || ''
 
   div.m-add-advert.js-modal-trigger(data-modal="advert" class=spec.__class)&attributes(attributes)
-    .m-add-advert__text Додати оголошення
+    .m-add-advert__text Замовити дзвінок
     .m-add-advert__btn
-      +icon({ '__class': 'm-add-advert__icon', icon: 'plus' })
+      +icon({ '__class': 'm-add-advert__icon', icon: 'telephone' })
