@@ -1,0 +1,8 @@
+mixin close(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  div.a-close(class=spec.__class class=spec.dark ? 'a-close--dark' : '')&attributes(attributes)
+      .a-close__content
+        span
+        span

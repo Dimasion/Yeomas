@@ -24,3 +24,24 @@
     }
   }
 }
+
+//------------------------------
+// Respnsive
+//------------------------------
+@media #{$tablet} {
+  .m-details {
+    &__title {
+      font-size: $fs-12;
+    }
+  }
+}
+
+@media #{$phone} {
+  .m-details {
+    flex-wrap: nowrap;
+    &__detail {
+      width: 25%;
+      margin-bottom: 0px;
+    }
+  }
+}

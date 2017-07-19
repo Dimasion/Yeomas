@@ -4,3 +4,13 @@
   margin: auto;
   padding: 20px 0 15px;
 }
+
+//------------------------------
+// Responsive
+//------------------------------
+
+@media #{$tablet} {
+  .range {
+    width: 100%;
+  }
+}

@@ -4,8 +4,11 @@ mixin title(spec)
   - spec.isLogo = spec.isLogo || false
 
   div.o-title(class=spec.__class)&attributes(attributes)
-    .container.o-title__container
-      if spec.isLogo
+    if spec.isLogo
+      .container.o-title__container.o-title__container--logo
         a(href="/").o-title__home
-          img(src="img/logo.png").o-title__logo
-      span Real estate ivano-frankivsk
+          img(src="img/logo-min.png").o-title__logo
+        span Нерухомiсть Iвано-Франкiвська
+    else
+      .container.o-title__container
+        span Нерухомiсть Iвано-Франкiвська

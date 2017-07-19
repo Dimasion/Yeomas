@@ -11,7 +11,6 @@
   &__top,
   &__bottom {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
   }
   &__pagination {
@@ -41,4 +40,43 @@
     margin-bottom: 30px;
   }
   
+}
+
+//------------------------------
+// Responsive
+//------------------------------
+@media #{$desktop} {
+  .o-content {
+    margin: 50px 0;
+    &__breadcrumbs {
+      padding-left: 0;
+    }
+    &__pagination {
+      justify-content: flex-start;
+    }
+  }
+}
+
+@media #{$phone} {
+  .o-content {
+    &__item {
+      width: 100%;
+    }
+  }
+}
+
+@media #{$iPhone} {
+  .o-content {
+    &__top,
+    &__bottom {
+      flex-direction: column;
+      & > * {
+        width: 100%;
+        justify-content: center;
+        &:not(:first-child) {
+          margin-top: 15px;
+        }
+      }
+    }
+  }
 }

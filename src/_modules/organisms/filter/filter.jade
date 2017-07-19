@@ -1,14 +1,17 @@
 include ../../atoms/select/select
 include ../../atoms/button/button
 include ../../molecules/range-tabs/range-tabs
-
+include ../../atoms/button/button
+include ../../atoms/close/close
 mixin filter(spec)
   - spec = spec || {}
   - spec.__class = spec.__class || ''
-
+  .o-filter-btn-wrap
+    +button({ '__class': 'o-filter-btn js-filter-open', text: 'Фільтр'})
   div.o-filter(class=spec.__class)&attributes(attributes)
     .container
       form.o-filter__form
+        +close({ '__class': 'o-filter__close js-filter-close', dark: true })
         .o-filter__row
           .o-filter__col
             +select({ '__class': 'asd', id: 'select-1', name: 'action', items: [
@@ -29,6 +32,24 @@ mixin filter(spec)
                 { name: 'Каскад', val: 'cascade'},
                 { name: 'Пасічна', val: 'pasichna'},
                 { name: 'Центр', val: 'center'},
+                { name: 'Майзлі', val: 'maizli'},
+                { name: 'Майзлі', val: 'maizli'},
+                { name: 'Майзлі', val: 'maizli'},
+                { name: 'Майзлі', val: 'maizli'},
+                { name: 'Майзлі', val: 'maizli'},
+                { name: 'Майзлі', val: 'maizli'},
+                { name: 'Майзлі', val: 'maizli'},
+                { name: 'Майзлі', val: 'maizli'},
+                { name: 'Майзлі', val: 'maizli'},
+                { name: 'Майзлі', val: 'maizli'},
+                { name: 'Майзлі', val: 'maizli'},
+                { name: 'Майзлі', val: 'maizli'},
+                { name: 'Майзлі', val: 'maizli'},
+                { name: 'Майзлі', val: 'maizli'},
+                { name: 'Майзлі', val: 'maizli'},
+                { name: 'Майзлі', val: 'maizli'},
+                { name: 'Майзлі', val: 'maizli'},
+                { name: 'Майзлі', val: 'maizli'},
                 { name: 'Майзлі', val: 'maizli'}
               ]})
           .o-filter__col.o-filter__col--realty
@@ -43,7 +64,7 @@ mixin filter(spec)
                 { name: 'З ремонтом', val: 'z-remontom'},
                 { name: 'Сирець', val: 'syrets'}
               ]})
-          .o-filter__col
+          .o-filter__col.o-filter__col--range-1
             +range-tabs({ '__class': 'js-customization', tabs: [
               { id: '1', name: 'Площа', active: true, rangeOptions: { 
                   name: 'squere',
@@ -73,7 +94,7 @@ mixin filter(spec)
                 }
               }
             ]})
-          .o-filter__col
+          .o-filter__col.o-filter__col--range-2
             +range-tabs({tabs: [
               { id: '4', name: 'UAH', active: true, rangeOptions: {
                   rootClass: 'js-filter-currency',
@@ -96,5 +117,5 @@ mixin filter(spec)
                 },
               },
             ]})
-          .o-filter__col
+          .o-filter__col.o-filter__col--search
             +button({ text: 'Шукати' })

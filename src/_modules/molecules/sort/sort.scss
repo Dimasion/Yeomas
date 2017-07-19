@@ -38,3 +38,9 @@
     }
   }
 }
+
+@media #{$iPhone} {
+  .m-sort {
+    align-items: center;
+  }
+}

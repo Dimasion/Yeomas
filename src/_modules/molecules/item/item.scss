@@ -3,7 +3,7 @@
   position: relative;
   display: block;
   width: 100%;
-  height: 480px;
+  height: 485px;
   box-shadow: $bs-main;
   color: $c-dark-3;
   transition: $t-normal;
@@ -13,7 +13,7 @@
   &__image {
     position: relative;
     @include backgroundContainCenter;
-    height: 55%;
+    height: 53%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -62,9 +62,9 @@
   &__content {
     display: flex;
     flex-direction: column;
-    height: 45%;
+    height: 47%;
     justify-content: space-between;
-    padding: 15px 15px 25px;
+    padding: 15px;
     text-transform: uppercase;
   }
   &__describe {
@@ -73,9 +73,12 @@
   &__title {
     font-size: $fs-18;
     color: $c-dark-2;
+    @include liminText(2, $lh-1-3);
   }
   &__subtitle {
     font-size: $fs-14;
+    @include liminText(1, $lh-1-75);
+    color: $c-light-grey-3;
   }
   &__price {
     text-align: center;
@@ -91,6 +94,149 @@
     box-shadow: $bs-main-2;
     .m-item__addition {
       transform: translateY(0%);
+    }
+  }
+}
+
+//------------------------------
+// Responsive
+//------------------------------
+@media #{$tablet} {
+  .m-item {
+    height: 360px;
+    //------------------------------
+    // Top
+    //------------------------------
+    
+    &__image {
+      height: 40%;
+    }
+    &__addition { 
+      transform: translateY(0);
+      padding: 10px;
+      width: auto;
+      align-self: flex-end;
+    }
+    &__promotion {
+      width: 250px;
+      font-size: $fs-9;
+      padding: 5px;
+      right: -45px;
+      top: 120px;
+    }
+    //------------------------------
+    // Bottom
+    //------------------------------
+    &__content {
+      height: 60%;
+    }
+    &__title {
+      font-size: $fs-15;
+    }
+    &__subtitle {
+      font-size: $fs-12;
+    }
+  }
+}
+
+@media #{$phone} {
+  .m-item {
+    display: flex;
+    height: 240px;
+    overflow: hidden;
+    &__date,
+    &__addition {
+      position: absolute;
+      padding: 10px;
+      min-width: auto;
+    }
+    &__promotion {
+      width: 250px;
+      font-size: $fs-9;
+      padding: 7px;
+      right: static;
+      left: -110px;
+      top: -50px;
+      background: rgba($c-orange, 0.5);
+      transform: rotate(-45deg);
+    }
+    &__date {
+      left: 40%;
+      color: $c-light-grey-3;
+      width: 60%;
+      text-align: left;
+      background: rgba(0,0,0,.02);
+    }
+    &__addition {
+      right: 0;
+      background: transparent;
+      color: $c-light-grey-3;
+    }
+    &__image {
+      position: static;
+    }
+
+    &__image,
+    &__content {
+      height: calc(100% - 80px);
+    }
+    &__content {
+      justify-content: space-around;
+      padding-top: 35px;
+    }
+    &__details {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background: rgba(0,0,0,.02);
+      height: 80px;
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+    &__image {
+      width: 40%;
+    }
+    &__content {
+      width: 60%;
+    }
+    &__price {
+      margin: 0;
+      color: $c-orange;
+    }
+  }
+}
+
+@media #{$iPhone} {
+  .m-item {
+    height: 400px;
+    flex-direction: column;
+    &__image,
+    &__content {
+      width: 100%;
+    }
+    &__image {
+      height: 50%;
+    }
+    &__content {
+      height: calc(50% - 80px);
+      padding-top: 15px;
+    }
+    &__date,
+    &__addition {
+      position: relative;
+    }
+    &__date {
+      color: $c-white;
+      background: $c-black-op;
+      text-align: left;
+      align-self: flex-start;
+      left: 0;
+      width: auto;
+    }
+    &__addition {
+      background-color: $c-white-op;
+      color: $c-grey;
     }
   }
 }

@@ -1,7 +1,23 @@
 // filter styles
+.o-filter-btn-wrap {
+  display: none;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+.o-filter-btn {
+  // max-width: 300px;
+  width: calc(100% - 30px);
+  margin: auto;
+}
 .o-filter {
   position: relative;
   margin-top: 40px;
+  &__close {
+    display: none;
+    width: calc(100% - 30px);
+    margin: 15px auto;
+  }
   &__form {
     box-shadow: $bs-main;
     background: $c-white;
@@ -31,5 +47,88 @@
   }
   &--moved {
     margin-top: -35px;
+  }
+}
+
+//------------------------------
+// Responsive
+//------------------------------
+@media #{$desktop} {
+  .o-filter {
+    &:not(.o-filter--min) {
+      .o-filter__row:not(:last-child) {
+        margin-bottom: 0;
+      }
+      .o-filter__col {
+        width: 50%;
+        margin-bottom: 15px;
+        &--state {
+          order: 1;
+        }
+        &--range-1 {
+          order: 3;
+        }
+        &--range-2 {
+          order: 4;
+        }
+        &--search {
+          order: 2;
+        }
+      }
+    }
+  }
+}
+
+@media #{$tablet} {
+  .o-filter-btn-wrap {
+    display: block;
+  }
+  .o-filter {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    overflow-y: auto;
+    background: $c-dark;
+    &__close {
+      display: flex;
+    }
+    .o-filter__form {
+      box-shadow: none;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    .o-filter__col {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    .o-filter__row:not(:last-child) {
+      margin-bottom: 0;
+    }
+    &:not(.o-filter--min) {
+      .o-filter__col {
+        width: 100%;
+        &--state {
+          order: 1;
+        }
+        &--range-1 {
+          order: 2;
+        }
+        &--range-2 {
+          order: 3;
+        }
+        &--search {
+          order: 4;
+        }
+      }
+    }
+    &--moved {
+      margin-top: 0;
+    }
   }
 }

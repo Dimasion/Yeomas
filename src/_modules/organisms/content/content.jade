@@ -17,14 +17,13 @@ mixin content(spec)
         +breadcrumbs({ '__class': 'o-content__breadcrumbs', items: spec.breadcrumbsItems})
       //- Top
       .o-content__top.row
-        .col-md-4
-        .o-content__pagination.col-md-4
+        .o-content__pagination.col-md-4.col-md-offset-4.col-xs-6
           +pagination
-        .o-content__sort.col-md-4
+        .o-content__sort.col-md-4.col-xs-6
           +sort({ items: [{ name: 'Ціна', active: true }, { name: 'Дата' }] })
       //- Items
       .o-content__items.row
-        .o-content__item.col-md-4
+        .o-content__item.col-md-4.col-xs-6
           +item({
             image: 'img/item.jpg',
             title: 'Просторна квартира',
@@ -36,10 +35,10 @@ mixin content(spec)
               floor: '9',
               region: 'Каскад'
             },
-            add: 'Продаж',
+            add: 'Оренда',
             date: '13.12.2017'
           })
-        .o-content__item.col-md-4
+        .o-content__item.col-md-4.col-xs-6
           +item({
             image: 'img/item-2.jpg',
             title: 'Цокольне приміщення з ремонтом',
@@ -54,7 +53,7 @@ mixin content(spec)
             add: 'Продаж',
             date: '20.03.2017'
           })
-        .o-content__item.col-md-4
+        .o-content__item.col-md-4.col-xs-6
           +item({
             image: 'img/item-3.jpg',
             title: 'Комерційне приміщення',
@@ -68,7 +67,7 @@ mixin content(spec)
             add: 'Продаж',
             date: '02.03.2017'
           })
-        .o-content__item.col-md-4
+        .o-content__item.col-md-4.col-xs-6
           +item({
             image: 'img/item-4.jpg',
             title: '2-кім. квартира',
@@ -84,7 +83,7 @@ mixin content(spec)
             date: '13.07.2017',
             promotion: true
           })
-        .o-content__item.col-md-4
+        .o-content__item.col-md-4.col-xs-6
           +item({
             image: 'img/item-5.jpg',
             title: 'Просторна квартира',
@@ -99,7 +98,7 @@ mixin content(spec)
             add: 'Продаж',
             date: '13.12.2017'
           })
-        .o-content__item.col-md-4
+        .o-content__item.col-md-4.col-xs-6
           +item({
             image: 'img/item-6.jpg',
             title: 'Просторна квартира',
@@ -114,7 +113,7 @@ mixin content(spec)
             add: 'Продаж',
             date: '13.12.2017'
           })
-        .o-content__item.col-md-4
+        .o-content__item.col-md-4.col-xs-6
           +item({
             image: 'img/item-7.png',
             title: 'Просторна квартира',
@@ -129,7 +128,7 @@ mixin content(spec)
             add: 'Продаж',
             date: '13.12.2017'
           })
-        .o-content__item.col-md-4
+        .o-content__item.col-md-4.col-xs-6
           +item({
             image: 'img/item-8.jpg',
             title: 'Просторна квартира',
@@ -144,7 +143,7 @@ mixin content(spec)
             add: 'Продаж',
             date: '13.12.2017'
           })
-        .o-content__item.col-md-4
+        .o-content__item.col-md-4.col-xs-6
           +item({
             image: 'img/item-9.jpg',
             title: 'Просторна квартира',
@@ -161,8 +160,7 @@ mixin content(spec)
           })
       //- Bottom
       .o-content__bottom.row
-        .col-md-4
-        .o-content__pagination.col-md-4
+        .o-content__pagination.col-md-4.col-md-offset-4.col-xs-6
           +pagination
-        .o-content__up.col-md-4
+        .o-content__up.col-md-4.col-xs-6
           +up

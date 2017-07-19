@@ -1,4 +1,5 @@
 include ../../atoms/icon/icon
+include ../../atoms/close/close
 
 mixin menu(spec)
   - spec = spec || {}
@@ -6,10 +7,7 @@ mixin menu(spec)
   - spec.active = spec.active || null
   .m-menu-overlay.js-menu-overlay
   nav.m-menu.js-menu(class=spec.__class)&attributes(attributes)
-    .m-menu__close.js-menu-close
-      .m-menu__close-content
-        span
-        span
+    +close({ '__class': 'm-menu__close js-menu-close' })
     .m-menu__items
       a.m-menu__item(href=site.data.pages.buildings.link class=site.data.pages.buildings.dataName  === spec.active ? 'm-menu__item--active' : '')
         span.m-menu__text= site.data.pages.buildings.name

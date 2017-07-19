@@ -25,6 +25,23 @@
 //------------------------------
 @media #{$tablet} {
   .o-title {
-    font-size: $fs-26;
+    font-size: $fs-24;
+    margin: 0;
+    padding: 15px 10px;
+    color: $c-white;
+    background: $c-dark;
+    &__container {
+      &--logo {
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media #{$phone} {
+  .o-title {
+    font-size: $fs-18;
   }
 }

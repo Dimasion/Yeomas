@@ -4,13 +4,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Нерухомість - Оренда</title>
   <meta name="description" content="Xata.if - description for SEO.">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
   <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body data-page="rent">
   <div class="o-title">
-    <div class="container o-title__container"><a href="/" class="o-title__home"><img src="img/logo.png" class="o-title__logo"></a><span>Real estate ivano-frankivsk</span>
-    </div>
+    <div class="container o-title__container o-title__container--logo"><a href="/" class="o-title__home"><img src="img/logo-min.png" class="o-title__logo"></a><span>Нерухомiсть Iвано-Франкiвська</span></div>
   </div>
   <div class="o-header">
     <div class="container">
@@ -18,8 +17,8 @@
         <div class="a-hamburger js-hamburger o-header__hamburger"><span></span><span></span><span></span></div>
         <div class="m-menu-overlay js-menu-overlay"></div>
         <nav class="m-menu js-menu o-header__menu">
-          <div class="m-menu__close js-menu-close">
-            <div class="m-menu__close-content"><span></span><span></span></div>
+          <div class="a-close m-menu__close js-menu-close">
+            <div class="a-close__content"><span></span><span></span></div>
           </div>
           <div class="m-menu__items"><a href="new-buildings.html" class="m-menu__item"><span class="m-menu__text">Новобудови</span>
               <svg class="a-icon m-menu__icon">
@@ -51,9 +50,15 @@
       </div>
     </div>
   </div>
+  <div class="o-filter-btn-wrap">
+    <button class="a-button o-filter-btn js-filter-open"><span class="a-button__text">Фільтр</span></button>
+  </div>
   <div class="o-filter">
     <div class="container">
       <form class="o-filter__form">
+        <div class="a-close o-filter__close js-filter-close a-close--dark">
+          <div class="a-close__content"><span></span><span></span></div>
+        </div>
         <div class="o-filter__row">
           <div class="o-filter__col">
             <select id="select-1" name="action" class="asd">
@@ -94,7 +99,7 @@
               <option value="syrets">Сирець</option>
             </select>
           </div>
-          <div class="o-filter__col">
+          <div class="o-filter__col o-filter__col--range-1">
             <div class="m-range-tabs js-customization">
               <div class="m-range-tabs__contents">
                 <div data-tab="1" class="m-range-tabs__content">
@@ -123,7 +128,7 @@
               </div>
             </div>
           </div>
-          <div class="o-filter__col">
+          <div class="o-filter__col o-filter__col--range-2">
             <div class="m-range-tabs">
               <div class="m-range-tabs__contents">
                 <div data-tab="4" class="m-range-tabs__content">
@@ -145,7 +150,7 @@
               </div>
             </div>
           </div>
-          <div class="o-filter__col">
+          <div class="o-filter__col o-filter__col--search">
             <button class="a-button"><span class="a-button__text">Шукати</span></button>
           </div>
         </div>
@@ -157,8 +162,7 @@
       <div class="m-breadcrumbs o-content__breadcrumbs"><a href="#" class="m-breadcrumbs__breadcrumb">На головну</a><a href="#" class="m-breadcrumbs__breadcrumb">Купити</a><a href="#" class="m-breadcrumbs__breadcrumb">Квартири</a>
       </div>
       <div class="o-content__top row">
-        <div class="col-md-4"></div>
-        <div class="o-content__pagination col-md-4">
+        <div class="o-content__pagination col-md-4 col-md-offset-4 col-xs-6">
           <div class="m-pagination">
             <svg class="a-icon m-pagination__item m-pagination__item--icon">
               <use xlink:href=".//img/sprite.svg#icon-left"></use>
@@ -173,7 +177,7 @@
             </svg>
           </div>
         </div>
-        <div class="o-content__sort col-md-4">
+        <div class="o-content__sort col-md-4 col-xs-6">
           <div class="m-sort">
             <div class="m-sort__title">Сортування:</div>
             <div class="m-sort__items"><a href="#" class="m-sort__item--active m-sort__item">Ціна</a><a href="#" class="m-sort__item">Дата</a>
@@ -182,10 +186,10 @@
         </div>
       </div>
       <div class="o-content__items row">
-        <div class="o-content__item col-md-4"><a href="#" class="m-item">
+        <div class="o-content__item col-md-4 col-xs-6"><a href="#" class="m-item">
             <div data-path-from-js="img/item.jpg" style="background-image: url('img/item.jpg')" class="m-item__image js-bg-color">
               <div class="m-item__date">13.12.2017</div>
-              <div class="m-item__addition">Продаж</div>
+              <div class="m-item__addition">Оренда</div>
             </div>
             <div class="m-item__content">
               <div class="m-item__describe">
@@ -215,7 +219,7 @@
                   <div class="m-details__title">9</div>
                   <div class="m-details__subtitle">Поверх</div>
                 </div>
-                <div class="m-item__detail">
+                <div class="m-details__detail">
                   <svg class="a-icon m-details__icon">
                     <use xlink:href=".//img/sprite.svg#icon-logo"></use>
                   </svg>
@@ -225,7 +229,7 @@
               </div>
             </div></a>
         </div>
-        <div class="o-content__item col-md-4"><a href="#" class="m-item">
+        <div class="o-content__item col-md-4 col-xs-6"><a href="#" class="m-item">
             <div data-path-from-js="img/item-2.jpg" style="background-image: url('img/item-2.jpg')" class="m-item__image js-bg-color">
               <div class="m-item__date">20.03.2017</div>
               <div class="m-item__addition">Продаж</div>
@@ -258,7 +262,7 @@
                   <div class="m-details__title">-</div>
                   <div class="m-details__subtitle">Поверх</div>
                 </div>
-                <div class="m-item__detail">
+                <div class="m-details__detail">
                   <svg class="a-icon m-details__icon">
                     <use xlink:href=".//img/sprite.svg#icon-logo"></use>
                   </svg>
@@ -268,7 +272,7 @@
               </div>
             </div></a>
         </div>
-        <div class="o-content__item col-md-4"><a href="#" class="m-item">
+        <div class="o-content__item col-md-4 col-xs-6"><a href="#" class="m-item">
             <div data-path-from-js="img/item-3.jpg" style="background-image: url('img/item-3.jpg')" class="m-item__image js-bg-color">
               <div class="m-item__date">02.03.2017</div>
               <div class="m-item__addition">Продаж</div>
@@ -301,7 +305,7 @@
                   <div class="m-details__title">1</div>
                   <div class="m-details__subtitle">Поверх</div>
                 </div>
-                <div class="m-item__detail">
+                <div class="m-details__detail">
                   <svg class="a-icon m-details__icon">
                     <use xlink:href=".//img/sprite.svg#icon-logo"></use>
                   </svg>
@@ -311,7 +315,7 @@
               </div>
             </div></a>
         </div>
-        <div class="o-content__item col-md-4"><a href="#" class="m-item">
+        <div class="o-content__item col-md-4 col-xs-6"><a href="#" class="m-item">
             <div data-path-from-js="img/item-4.jpg" style="background-image: url('img/item-4.jpg')" class="m-item__image js-bg-color">
               <div class="m-item__date">13.07.2017</div>
               <div class="m-item__addition">Продаж</div>
@@ -345,7 +349,7 @@
                   <div class="m-details__title">2</div>
                   <div class="m-details__subtitle">Поверх</div>
                 </div>
-                <div class="m-item__detail">
+                <div class="m-details__detail">
                   <svg class="a-icon m-details__icon">
                     <use xlink:href=".//img/sprite.svg#icon-logo"></use>
                   </svg>
@@ -355,7 +359,7 @@
               </div>
             </div></a>
         </div>
-        <div class="o-content__item col-md-4"><a href="#" class="m-item">
+        <div class="o-content__item col-md-4 col-xs-6"><a href="#" class="m-item">
             <div data-path-from-js="img/item-5.jpg" style="background-image: url('img/item-5.jpg')" class="m-item__image js-bg-color">
               <div class="m-item__date">13.12.2017</div>
               <div class="m-item__addition">Продаж</div>
@@ -388,7 +392,7 @@
                   <div class="m-details__title">9</div>
                   <div class="m-details__subtitle">Поверх</div>
                 </div>
-                <div class="m-item__detail">
+                <div class="m-details__detail">
                   <svg class="a-icon m-details__icon">
                     <use xlink:href=".//img/sprite.svg#icon-logo"></use>
                   </svg>
@@ -398,7 +402,7 @@
               </div>
             </div></a>
         </div>
-        <div class="o-content__item col-md-4"><a href="#" class="m-item">
+        <div class="o-content__item col-md-4 col-xs-6"><a href="#" class="m-item">
             <div data-path-from-js="img/item-6.jpg" style="background-image: url('img/item-6.jpg')" class="m-item__image js-bg-color">
               <div class="m-item__date">13.12.2017</div>
               <div class="m-item__addition">Продаж</div>
@@ -431,7 +435,7 @@
                   <div class="m-details__title">9</div>
                   <div class="m-details__subtitle">Поверх</div>
                 </div>
-                <div class="m-item__detail">
+                <div class="m-details__detail">
                   <svg class="a-icon m-details__icon">
                     <use xlink:href=".//img/sprite.svg#icon-logo"></use>
                   </svg>
@@ -441,7 +445,7 @@
               </div>
             </div></a>
         </div>
-        <div class="o-content__item col-md-4"><a href="#" class="m-item">
+        <div class="o-content__item col-md-4 col-xs-6"><a href="#" class="m-item">
             <div data-path-from-js="img/item-7.png" style="background-image: url('img/item-7.png')" class="m-item__image js-bg-color">
               <div class="m-item__date">13.12.2017</div>
               <div class="m-item__addition">Продаж</div>
@@ -474,7 +478,7 @@
                   <div class="m-details__title">9</div>
                   <div class="m-details__subtitle">Поверх</div>
                 </div>
-                <div class="m-item__detail">
+                <div class="m-details__detail">
                   <svg class="a-icon m-details__icon">
                     <use xlink:href=".//img/sprite.svg#icon-logo"></use>
                   </svg>
@@ -484,7 +488,7 @@
               </div>
             </div></a>
         </div>
-        <div class="o-content__item col-md-4"><a href="#" class="m-item">
+        <div class="o-content__item col-md-4 col-xs-6"><a href="#" class="m-item">
             <div data-path-from-js="img/item-8.jpg" style="background-image: url('img/item-8.jpg')" class="m-item__image js-bg-color">
               <div class="m-item__date">13.12.2017</div>
               <div class="m-item__addition">Продаж</div>
@@ -517,7 +521,7 @@
                   <div class="m-details__title">9</div>
                   <div class="m-details__subtitle">Поверх</div>
                 </div>
-                <div class="m-item__detail">
+                <div class="m-details__detail">
                   <svg class="a-icon m-details__icon">
                     <use xlink:href=".//img/sprite.svg#icon-logo"></use>
                   </svg>
@@ -527,7 +531,7 @@
               </div>
             </div></a>
         </div>
-        <div class="o-content__item col-md-4"><a href="#" class="m-item">
+        <div class="o-content__item col-md-4 col-xs-6"><a href="#" class="m-item">
             <div data-path-from-js="img/item-9.jpg" style="background-image: url('img/item-9.jpg')" class="m-item__image js-bg-color">
               <div class="m-item__date">13.12.2017</div>
               <div class="m-item__addition">Продаж</div>
@@ -560,7 +564,7 @@
                   <div class="m-details__title">9</div>
                   <div class="m-details__subtitle">Поверх</div>
                 </div>
-                <div class="m-item__detail">
+                <div class="m-details__detail">
                   <svg class="a-icon m-details__icon">
                     <use xlink:href=".//img/sprite.svg#icon-logo"></use>
                   </svg>
@@ -572,8 +576,7 @@
         </div>
       </div>
       <div class="o-content__bottom row">
-        <div class="col-md-4"></div>
-        <div class="o-content__pagination col-md-4">
+        <div class="o-content__pagination col-md-4 col-md-offset-4 col-xs-6">
           <div class="m-pagination">
             <svg class="a-icon m-pagination__item m-pagination__item--icon">
               <use xlink:href=".//img/sprite.svg#icon-left"></use>
@@ -588,7 +591,7 @@
             </svg>
           </div>
         </div>
-        <div class="o-content__up col-md-4">
+        <div class="o-content__up col-md-4 col-xs-6">
           <div class="m-up">
             <svg class="a-icon m-up__icon">
               <use xlink:href=".//img/sprite.svg#icon-up-arrow"></use>
@@ -626,9 +629,8 @@
     <div class="o-footer__bottom">
       <div class="container">
         <div class="row">
-          <div class="col-md-4"></div>
-          <div class="o-footer__copyright col-md-4">All rigts reserved xata.if.ua 2017</div>
-          <div class="o-footer__up col-md-4">
+          <div class="o-footer__copyright col-sm-offset-4 col-sm-4 col-xs-12">All rigts reserved xata.if.ua 2017</div>
+          <div class="o-footer__up col-sm-4 col-xs-12">
             <div class="m-up">
               <svg class="a-icon m-up__icon">
                 <use xlink:href=".//img/sprite.svg#icon-up-arrow"></use>
