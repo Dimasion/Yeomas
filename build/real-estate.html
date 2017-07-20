@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
   <link rel="stylesheet" href="./styles/main.css">
 </head>
-<body data-page="secondary-market">
+<body data-page="product">
   <div class="o-title">
     <div class="container o-title__container o-title__container--logo"><a href="/" class="o-title__home"><img src="img/logo-min.png" class="o-title__logo"></a><span>Нерухомiсть Iвано-Франкiвська</span></div>
   </div>
@@ -23,7 +23,7 @@
           <div class="m-menu__items"><a href="new-buildings.html" class="m-menu__item"><span class="m-menu__text">Новобудови</span>
               <svg class="a-icon m-menu__icon">
                 <use xlink:href=".//img/sprite.svg#icon-buildings"></use>
-              </svg></a><a href="secondary-market.html" class="m-menu__item m-menu__item--active"><span class="m-menu__text">Вторинний ринок</span>
+              </svg></a><a href="secondary-market.html" class="m-menu__item"><span class="m-menu__text">Вторинний ринок</span>
               <svg class="a-icon m-menu__icon">
                 <use xlink:href=".//img/sprite.svg#icon-market"></use>
               </svg></a><a href="rent.html" class="m-menu__item"><span class="m-menu__text">Оренда</span>
@@ -52,51 +52,60 @@
   </div>
   <div class="o-product-content">
     <div class="o-product-content__container container">
-      <div class="row">
+      <div class="o-product-content__head js-product-head"></div>
+      <div class="row o-product-content__sides">
         <div class="o-product-content__aside col-md-3">
           <div class="o-aside">
-            <div class="m-breadcrumbs o-aside__breadcrumbs"><a href="#" class="m-breadcrumbs__breadcrumb">На головну</a><a href="#" class="m-breadcrumbs__breadcrumb">Купити</a><a href="#" class="m-breadcrumbs__breadcrumb">Квартиру</a>
-            </div><a href="/" class="m-control o-aside__prev">
-              <svg class="a-icon m-control__icon">
-                <use xlink:href=".//img/sprite.svg#icon-left"></use>
-              </svg>
-              <div class="m-control__text">Назад</div></a><a href="#" style="background-image: url('img/advert.gif')" class="o-aside__banner"></a>
-            <div class="o-aside__news">
-              <div class="o-aside__title">Новини</div>
-              <div class="m-new o-aside__new">
-                <div style="background-image: url('img/item-2.jpg')" class="m-new__image"></div>
-                <div class="m-new__content">
-                  <div class="m-new__date">14.12.2016</div>
-                  <div class="m-new__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-                  <div class="m-new__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem maiores, reprehenderit qui distinctio excepturi molestiae. Perspiciatis sapiente fuga, saepe id omnis! Quae architecto quisquam est dolorem, adipisci quis, officia perferendis.</div><a href="#" class="m-new__more">
-                    <div class="m-new__more-text">Читати детальніше</div>
-                    <svg class="a-icon m-new__more-icon">
-                      <use xlink:href=".//img/sprite.svg#icon-right-2"></use>
-                    </svg></a>
+            <div class="o-aside__head js-aside-head">
+              <div class="m-breadcrumbs o-aside__breadcrumbs"><a href="#" class="m-breadcrumbs__breadcrumb">На головну</a><a href="#" class="m-breadcrumbs__breadcrumb">Купити</a><a href="#" class="m-breadcrumbs__breadcrumb">Квартиру</a>
+              </div><a href="/" class="m-control o-aside__prev">
+                <svg class="a-icon m-control__icon">
+                  <use xlink:href=".//img/sprite.svg#icon-left"></use>
+                </svg>
+                <div class="m-control__text">Назад</div></a>
+            </div><a href="#" style="background-image: url('img/advert.gif')" class="o-aside__banner"></a>
+            <div class="o-aside__title">Новини</div>
+            <div class="o-aside__news row">
+              <div class="o-aside__new col-md-12 col-xs-6">
+                <div class="m-new o-aside__article">
+                  <div style="background-image: url('img/item-2.jpg')" class="m-new__image"></div>
+                  <div class="m-new__content">
+                    <div class="m-new__date">14.12.2016</div>
+                    <div class="m-new__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                    <div class="m-new__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem maiores, reprehenderit qui distinctio excepturi molestiae. Perspiciatis sapiente fuga, saepe id omnis! Quae architecto quisquam est dolorem, adipisci quis, officia perferendis.</div><a href="#" class="m-new__more">
+                      <div class="m-new__more-text">Читати детальніше</div>
+                      <svg class="a-icon m-new__more-icon">
+                        <use xlink:href=".//img/sprite.svg#icon-right-2"></use>
+                      </svg></a>
+                  </div>
                 </div>
               </div>
-              <div class="m-new o-aside__new">
-                <div style="background-image: url('img/item-2.jpg')" class="m-new__image"></div>
-                <div class="m-new__content">
-                  <div class="m-new__date">14.12.2016</div>
-                  <div class="m-new__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-                  <div class="m-new__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem maiores, reprehenderit qui distinctio excepturi molestiae. Perspiciatis sapiente fuga, saepe id omnis! Quae architecto quisquam est dolorem, adipisci quis, officia perferendis.</div><a href="#" class="m-new__more">
-                    <div class="m-new__more-text">Читати детальніше</div>
-                    <svg class="a-icon m-new__more-icon">
-                      <use xlink:href=".//img/sprite.svg#icon-right-2"></use>
-                    </svg></a>
+              <div class="o-aside__new col-md-12 col-xs-6">
+                <div class="m-new o-aside__article">
+                  <div style="background-image: url('img/item-2.jpg')" class="m-new__image"></div>
+                  <div class="m-new__content">
+                    <div class="m-new__date">14.12.2016</div>
+                    <div class="m-new__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                    <div class="m-new__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem maiores, reprehenderit qui distinctio excepturi molestiae. Perspiciatis sapiente fuga, saepe id omnis! Quae architecto quisquam est dolorem, adipisci quis, officia perferendis.</div><a href="#" class="m-new__more">
+                      <div class="m-new__more-text">Читати детальніше</div>
+                      <svg class="a-icon m-new__more-icon">
+                        <use xlink:href=".//img/sprite.svg#icon-right-2"></use>
+                      </svg></a>
+                  </div>
                 </div>
               </div>
-              <div class="m-new o-aside__new">
-                <div style="background-image: url('img/item-2.jpg')" class="m-new__image"></div>
-                <div class="m-new__content">
-                  <div class="m-new__date">14.12.2016</div>
-                  <div class="m-new__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-                  <div class="m-new__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem maiores, reprehenderit qui distinctio excepturi molestiae. Perspiciatis sapiente fuga, saepe id omnis! Quae architecto quisquam est dolorem, adipisci quis, officia perferendis.</div><a href="#" class="m-new__more">
-                    <div class="m-new__more-text">Читати детальніше</div>
-                    <svg class="a-icon m-new__more-icon">
-                      <use xlink:href=".//img/sprite.svg#icon-right-2"></use>
-                    </svg></a>
+              <div class="o-aside__new col-md-12 col-xs-6">
+                <div class="m-new o-aside__article">
+                  <div style="background-image: url('img/item-2.jpg')" class="m-new__image"></div>
+                  <div class="m-new__content">
+                    <div class="m-new__date">14.12.2016</div>
+                    <div class="m-new__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                    <div class="m-new__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem maiores, reprehenderit qui distinctio excepturi molestiae. Perspiciatis sapiente fuga, saepe id omnis! Quae architecto quisquam est dolorem, adipisci quis, officia perferendis.</div><a href="#" class="m-new__more">
+                      <div class="m-new__more-text">Читати детальніше</div>
+                      <svg class="a-icon m-new__more-icon">
+                        <use xlink:href=".//img/sprite.svg#icon-right-2"></use>
+                      </svg></a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -180,7 +189,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="o-product__info-footer"><a href="tel:+38 050 182 53 33" class="m-phone o-product__write">
+                  <div class="o-product__info-footer"><a href="tel:+38 050 182 53 33" class="m-phone o-product__phone">
                       <svg class="a-icon m-phone__icon">
                         <use xlink:href=".//img/sprite.svg#icon-telephone"></use>
                       </svg>
