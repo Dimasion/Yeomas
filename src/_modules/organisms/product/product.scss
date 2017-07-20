@@ -3,7 +3,6 @@
   //------------------------------
   // Header
   //------------------------------
-  
   &__title {
     font-size: $fs-26;
     text-transform: uppercase;
@@ -18,13 +17,10 @@
     margin-top: 30px;
     font-size: $fs-12;
   }
-
   //------------------------------
   // Main
   //------------------------------
-
   // Info
-
   &__info {
     &-header {
       display: flex;
@@ -44,13 +40,12 @@
     box-shadow: $bs-main;
     padding: 10px;
     width: 100%;
+    max-width: 400px;
   }
   &__add-advert {
     align-self: flex-end;
     margin-top: 15px;
-  }
-  &__manager {
-    margin-top: 15px;
+    max-width: 400px;
   }
   &__row {
     position: relative;
@@ -73,7 +68,57 @@
     margin-top: 40px;
   }
 }
-
 #map {
   width: 100%;
 }
+
+
+//------------------------------
+// Responsive
+//------------------------------
+@media #{$screen} {
+  .o-product {
+    &__add-advert {
+      width: 100%;
+    }
+    //------------------------------
+    // Main
+    //------------------------------
+    &__info {
+      &-footer {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    &__phone {
+      width: 100%;
+      max-width: 400px;
+    }
+    &__write {
+      width: 100%;
+      margin-top: 15px;
+      max-width: 400px;
+    }
+  }
+}
+
+
+@media #{$desktop} {
+  .o-product {
+    //------------------------------
+    // Info
+    //------------------------------
+    &__info {
+      padding: 30px 15px;
+      &-main {
+        display: flex;
+        justify-content: center;
+      }
+    }
+    &__details,
+    &__add-advert {
+      align-self: center;
+    }
+  }
+}
+  

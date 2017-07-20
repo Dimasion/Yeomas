@@ -12,6 +12,7 @@ require('waypoints/lib/noframework.waypoints.js');
 require('slick-carousel/slick/slick.js');
 require('jquery-mask-plugin/dist/jquery.mask.js');
 require('jquery-touchswipe/jquery.touchSwipe.js');
+require('mediaCheck/js/mediaCheck');
 // Modules
 
 // Atoms
@@ -31,6 +32,7 @@ import Modal from './../_modules/molecules/modal/modal';
 import Filter from './../_modules/organisms/filter/filter';
 import Partners from './../_modules/organisms/partners/partners';
 import Product from './../_modules/organisms/product/product';
+import ProductContent from './../_modules/organisms/product-content/product-content';
 // ------------------------------
 // Additional functionality
 // ------------------------------
@@ -59,6 +61,9 @@ $(() => {
   new Up();
   if (currentPage === 'home') {
     new Partners();
+  }
+  if (currentPage === 'product') {
+    new ProductContent();
   }
   new Filter();
   new Range();

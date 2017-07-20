@@ -7,6 +7,7 @@
     "jquery-mask-plugin": "^1.14.11",
     "jquery-touchswipe": "^1.6.15",
     "lodash": "^4.17.4",
+    "mediaCheck": "^0.4.6",
     "node-vibrant": "^3.0.0-alpha.2",
     "nouislider": "^10.0.0",
     "slick-carousel": "^1.6.0",

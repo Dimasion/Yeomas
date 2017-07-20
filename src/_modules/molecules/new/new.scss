@@ -56,3 +56,14 @@
     box-shadow: $bs-main;
   }
 }
+
+//------------------------------
+// Responsive
+//------------------------------
+@media #{$desktop} {
+  .m-new {
+    &__image {
+      height: 200px;
+    }
+  }
+}

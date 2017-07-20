@@ -7,15 +7,19 @@ mixin aside(spec)
   - spec.__class = spec.__class || ''
 
   div.o-aside(class=spec.__class)&attributes(attributes)
-    +breadcrumbs({ '__class': 'o-aside__breadcrumbs', items: [
-      { link: '#', name: 'На головну' },
-      { link: '#', name: 'Купити' },
-      { link: '#', name: 'Квартиру' },
-    ] })
-    +control({ '__class': 'o-aside__prev', type: 'left' })
+    .o-aside__head.js-aside-head
+      +breadcrumbs({ '__class': 'o-aside__breadcrumbs', items: [
+        { link: '#', name: 'На головну' },
+        { link: '#', name: 'Купити' },
+        { link: '#', name: 'Квартиру' },
+      ] })
+      +control({ '__class': 'o-aside__prev', type: 'left' })
     a(href="#" style="background-image: url('img/advert.gif')").o-aside__banner
-    .o-aside__news
-      .o-aside__title Новини
-      +new({ '__class': 'o-aside__new' })
-      +new({ '__class': 'o-aside__new' })
-      +new({ '__class': 'o-aside__new' })
+    .o-aside__title Новини
+    .o-aside__news.row
+      .o-aside__new.col-md-12.col-xs-6
+        +new({ '__class': 'o-aside__article' })
+      .o-aside__new.col-md-12.col-xs-6
+        +new({ '__class': 'o-aside__article' })
+      .o-aside__new.col-md-12.col-xs-6
+        +new({ '__class': 'o-aside__article' })

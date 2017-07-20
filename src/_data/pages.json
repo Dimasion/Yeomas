@@ -13,5 +13,10 @@
     "dataName": "rent",
     "name": "Оренда",
     "link": "rent.html"
+  },
+  "product": {
+    "dataName": "product",
+    "name": "Об'єкт",
+    "link": "real-estate.html"
   }
 }

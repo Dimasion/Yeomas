@@ -7,7 +7,8 @@ mixin product-content(spec)
 
   div.o-product-content(class=spec.__class)&attributes(attributes)
     .o-product-content__container.container
-      .row
+      .o-product-content__head.js-product-head
+      .row.o-product-content__sides
         .o-product-content__aside.col-md-3
           +aside
         .o-product-content__product.col-md-9

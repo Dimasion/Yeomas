@@ -1,4 +1,31 @@
 // product-content styles
 .o-product-content {
   margin: 80px 0px 40px 0px;
+  &__head {
+    display: none;
+  }
+}
+
+//------------------------------
+// Responsive
+//------------------------------
+@media #{$desktop} {
+  .o-product-content {
+    margin-top: 40px;
+    &__head {
+      display: block;
+      margin-bottom: 30px;
+    }
+    &__sides {
+      display: flex;
+      flex-direction: column;
+    }
+    &__aside {
+      order: 2;
+    }
+    &__product {
+      order: 1;
+      margin-bottom: 30px;
+    }
+  }
 }
