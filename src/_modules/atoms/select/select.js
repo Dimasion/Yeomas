@@ -4,7 +4,7 @@ import { debounce } from 'lodash';
 export default class Select {
   constructor() {
     this.select = 'select';
-    this.changableSelect = '.js-select-type';
+    this.changableSelect = 'select';
     this.init();
   }
   init () {
@@ -45,7 +45,7 @@ export default class Select {
         $this.val($(this).attr('rel'));
         $list.hide();
         $this.closest('.select').find(self.changableSelect).length !== 0
-          ? $(document).trigger( 'onChangeSelectType', $(this).attr('rel'))
+          ? $(document).trigger( 'onChangeSelect', $(this).attr('rel'))
           : '';
       });
 

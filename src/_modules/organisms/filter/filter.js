@@ -8,10 +8,10 @@ export default class Filter extends RangeTabs {
     this.openTrigger = '.js-filter-open';
     this.filterCurrency = '.js-filter-currency';
     this.filterMinClass = 'o-filter--min';
+    this.filterSecondClass = 'o-filter--second';
     this.custommizationTabs = '.js-customization';
     
     this.initFilter();
-    this.minValues = ['property'];
   }
 
   initFilter () {
@@ -19,18 +19,31 @@ export default class Filter extends RangeTabs {
     $(document).on('currencyChange', (event) => {
       this.changeCurrency();
     });
-    $(document).on( 'onChangeSelectType', ( event, value ) => {
-      let some = this.minValues.some((item) => {
-        return item === value;
-      });
 
-      if (some) {
+    $(document).on( 'onChangeSelect', ( event, value ) => {
+      console.log(value);
+
+      if (value === 'property') {
         $(this.filterSelector).addClass(this.filterMinClass);
         this.onOnlyFirstMode();
       }
-      else {
+      else if (value === 'second') {
+        $(this.filterSelector).addClass(this.filterSecondClass);
+      } else {
         $(this.filterSelector).removeClass(this.filterMinClass);
+        $(this.filterSelector).removeClass(this.filterSecondClass);
         this.offOnlyFirstMode();
+
+
+        $('select').each((i, item) => {
+          if($(item).val() === 'second') {
+            $(this.filterSelector).addClass(this.filterSecondClass);
+          }
+          if($(item).val() === 'property') {
+            $(this.filterSelector).addClass(this.filterMinClass);
+            this.onOnlyFirstMode();
+          }
+        });
       }
     });
 
