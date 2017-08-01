@@ -16,7 +16,7 @@ export default class Select {
       $this.after('<div class="select-styled"></div>');
 
       var $styledSelect = $this.next('div.select-styled');
-      $styledSelect.text($this.children('option').eq(0).text());
+      $styledSelect.text($this.children('option:selected').text());
 
       var $list = $('<ul />', {
         'class': 'select-options'

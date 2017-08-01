@@ -16,7 +16,7 @@ mixin filter(spec)
           .o-filter__col
             +select({ '__class': 'asd', id: 'select-1', name: 'action', items: [
                 { name: 'Купити', val: 'buy'},
-                { name: 'Оренда', val: 'rent'}
+                { name: 'Оренда', val: 'rent', selected: true}
               ]})
           .o-filter__col
             +select({ '__class': 'js-select-type', id: 'select-2', name: 'type', items: [
@@ -31,7 +31,7 @@ mixin filter(spec)
                 { name: 'Бам', val: 'bam'},
                 { name: 'Каскад', val: 'cascade'},
                 { name: 'Пасічна', val: 'pasichna'},
-                { name: 'Центр', val: 'center'},
+                { name: 'Центр', val: 'center', selected: true},
                 { name: 'Майзлі', val: 'maizli'},
                 { name: 'Майзлі', val: 'maizli'},
                 { name: 'Майзлі', val: 'maizli'},
